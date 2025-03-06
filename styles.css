@@ -1,0 +1,1660 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+/* Evitar el scroll horizontal */
+html, body {
+    overflow-x: hidden; /* Esto asegura que no haya scroll horizontal */
+    margin: 0; /* Evitar cualquier margen por defecto */
+}
+
+body {
+  background: linear-gradient(135deg, #f797af, #a58ad6);
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+  background-attachment: fixed; /* Fondo fijo para evitar cortes al hacer scroll */
+}
+
+/* Imagen de fondo */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Asegura que ocupe toda la altura */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center center; /* Asegura que la imagen siempre esté centrada */
+  z-index: -1;
+
+}
+
+
+/*Seccion pantalla principal*/
+@keyframes caerConfeti {
+  0% {
+      transform: translateY(-100px); /* Comienza fuera de la pantalla */
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100vh); /* Llega hasta el fondo de la pantalla */
+      opacity: 0; /* Desaparece al llegar al fondo */
+  }
+}
+
+.confeti {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 15px; /* Ajusta el tamaño para que sea un poco más grande */
+  height: 15px; 
+  background-color: #48ff00; /* Color de confeti rosa por defecto */
+  border-radius: 3px; /* Bordes redondeados para que parezca más "papel" */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para simular un efecto 3D */
+  animation: caerConfeti 3s infinite linear;
+  pointer-events: none; /* Asegura que el confeti no interactúe con otros elementos */
+}
+
+/* Colores aleatorios para los confetis */
+.confeti:nth-child(odd) {
+  background-color: #1900ff; /* Tomate */
+}
+
+.confeti:nth-child(even) {
+  background-color: #ff0000; /* Turquesa */
+}
+
+/* Coloca otros colores para confeti */
+.confeti:nth-child(3n) {
+  background-color: #fffb00; /* Amarillo */
+}
+
+.confeti:nth-child(4n) {
+  background-color: #ffe600; /* Azul */
+}
+
+/* Confeti aleatorio, con duraciones y retrasos aleatorios */
+.confeti:nth-child(odd) {
+  animation-duration: 3.5s; /* Duración aleatoria */
+  animation-delay: 1s; /* Retraso aleatorio */
+}
+
+.confeti:nth-child(even) {
+  animation-duration: 3s; /* Duración aleatoria */
+  animation-delay: 2s; /* Retraso aleatorio */
+}
+
+
+/*Medias Confetti*/
+
+/* Media Query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+  .confeti {
+    width: 10px; /* Reduce el tamaño del confeti en pantallas pequeñas */
+    height: 10px;
+  }
+
+}
+
+
+
+/* Animacion de abejita */
+.abejita-animacion {
+  position: absolute;
+  width: 70px; /* Ajusta el tamaño de la abeja */
+  height: auto;
+  top: 3%; /* Ajusta el punto de inicio */
+  left: -7%; /* La abeja empieza fuera de la pantalla */
+  animation: volar 13s linear infinite;
+  transform-origin: center; /* Asegura que gire sobre su centro */
+}
+
+@keyframes volar {
+  0% {
+      transform: translateX(-100%) rotateY(0deg); /* Empieza a la izquierda con el perfil normal */
+  }
+  45% {
+      transform: translateX(90vw) translateY(20px) rotateY(0deg); /* La abeja llega a la mitad de su trayecto, ligeramente hacia abajo */
+  }
+  50% {
+      transform: translateX(100vw) translateY(-20px) rotateY(180deg); /* La abeja llega al final y se voltea */
+  }
+  55% {
+      transform: translateX(100vw) translateY(20px) rotateY(180deg); /* Mantiene el volcado mientras regresa, ligeramente hacia abajo */
+  }
+  100% {
+      transform: translateX(100%) translateY(0) rotateY(180deg); /* Regresa al inicio con el perfil volcado */
+  }
+}
+
+/*Medias Abejita*/
+@media (max-width:480px) {
+
+  .abejita-animacion {
+    position: absolute;
+    width: 50px; /* Ajusta el tamaño de la abeja */
+    height: auto;
+    top: 3%; /* Ajusta el punto de inicio */
+    left: -7%; /* La abeja empieza fuera de la pantalla */
+    animation: volar 13s linear infinite;
+    transform-origin: center; /* Asegura que gire sobre su centro */
+  }
+
+  @keyframes volar {
+    0% {
+        transform: translateX(-100%) rotateY(0deg); /* Empieza a la izquierda con el perfil normal */
+    }
+    45% {
+        transform: translateX(90vw) translateY(20px) rotateY(0deg); /* La abeja llega a la mitad de su trayecto, ligeramente hacia abajo */
+    }
+    50% {
+        transform: translateX(100vw) translateY(-20px) rotateY(180deg); /* La abeja llega al final y se voltea */
+    }
+    55% {
+        transform: translateX(100vw) translateY(20px) rotateY(180deg); /* Mantiene el volcado mientras regresa, ligeramente hacia abajo */
+    }
+    100% {
+        transform: translateX(100%) translateY(0) rotateY(180deg); /* Regresa al inicio con el perfil volcado */
+    }
+  }
+}
+
+#principal {
+  position: relative; /* Asegura que los elementos absolutos dentro de esta sección se posicionen relativos a ella */
+  width: 100%;
+  height: 100vh; /* Asegura que la sección principal ocupe toda la altura de la pantalla */
+  overflow: hidden; /* Evita que los elementos se desborden */
+}
+
+.contenedor-invitacion {
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Hace que los elementos hijos se posicionen en relación a este contenedor */
+}
+
+.imagen-feliz-cumple {
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+  width: 450px;
+  height: 250px;
+  position: absolute; /* Permite que el texto se posicione encima de la imagen */
+  margin-top: 1rem;
+  top: 5px; /* Posiciona el texto en la parte superior del contenedor */
+  z-index: 1; /* El texto debe estar encima de la imagen */
+
+}
+
+.imagen-amairani {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  width: 600px;
+  height: 450px;
+  position: absolute; /* La imagen estará encima del contenedor, permitiendo moverla */
+  top: 50px; /* Ajusta este valor para mover la imagen hacia abajo o hacia arriba según lo desees */
+  z-index: 0; /* La imagen está debajo del texto */
+}
+
+.banderines-izquierda {
+  position: absolute; /* Posición absoluta dentro de #principal */
+  width: 500px; /* Tamaño ajustado */
+  height: auto;
+  top: 0; /* Pegado al borde superior de #principal */
+  left: -100px; /* Ajusta este valor para que el banderín no se salga de la pantalla */
+  transform: rotate(-45deg);
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+  animation: ondeo 3s ease-in-out infinite alternate;
+}
+
+.banderines-derecha {
+  position: absolute; /* Posición absoluta dentro de #principal */
+  width: 500px; /* Tamaño ajustado */
+  height: auto;
+  top: 0; /* Pegado al borde superior de #principal */
+  right: -100px; /* Ajusta este valor para que el banderín no se salga de la pantalla */
+  transform: rotate(45deg);
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+  animation: ondeo-derecha 3s ease-in-out infinite alternate;
+}
+
+/* Animaciones de ondeo */
+@keyframes ondeo {
+  0% { transform: rotate(-45deg) translateY(0px); }
+  50% { transform: rotate(-43deg) translateY(35px); }
+  100% { transform: rotate(-45deg) translateY(0px); }
+}
+
+@keyframes ondeo-derecha {
+  0% { transform: rotate(45deg) translateY(0px); }
+  50% { transform: rotate(43deg) translateY(35px); }
+  100% { transform: rotate(45deg) translateY(0px); }
+}
+
+
+
+@media (max-width: 480px) {
+    #principal {
+        position: relative;  /* Mantiene la posición relativa */
+        width: 100%;
+        height: auto;        /* Cambia a auto para que se ajuste al contenido en móviles */
+        overflow-y: auto;    /* Permite el desplazamiento vertical si el contenido es mayor */
+        overflow-x: hidden;  /* Evita el desplazamiento horizontal */
+        padding: 10px;       /* Agrega un poco de espacio interno para mejorar la apariencia en móviles */
+    }
+
+    .contenedor-invitacion {
+      padding-top: 10px;          /* Reduce el padding para ahorrar espacio en móviles */
+      justify-content: flex-start; /* Alinea los elementos al inicio para mejorar el scroll en móviles */
+      align-items: center;        /* Mantiene la relación para los hijos posicionados */
+      padding-left: 5px;           /* Agrega un padding lateral suave */
+      padding-right: 5px;          /* Igual en el otro lado */
+  }
+
+  .imagen-feliz-cumple {
+    margin-bottom: 1px;         /* Reduce el espacio inferior */
+    padding-bottom: 1px;        /* Reduce el padding inferior */
+    width: 80%;                 /* Ajusta el tamaño al 80% del contenedor */
+    height: auto;               /* Ajusta la altura automáticamente */
+    position: relative;         /* Cambia a relative para que se adapte mejor a pantallas pequeñas */
+    margin-top: 1rem;
+    top: 0;                     /* Ajusta la posición superior para que no se desplace mucho */
+}
+
+.imagen-amairani {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  width: 90%;
+  height: auto;
+  position: relative; /* La imagen estará encima del contenedor, permitiendo moverla */
+  top: -130px; /* Ajusta este valor para mover la imagen hacia abajo o hacia arriba según lo desees */
+  z-index: 0; /* La imagen está debajo del texto */
+}
+
+
+
+.banderines-izquierda, .banderines-derecha {
+  width: 150px;               /* Reduce el tamaño de los banderines */
+  top: 8px;                  /* Ajusta la posición superior para que no se sobreponga */
+  transform: rotate(0deg) translateX(50%);  /* Centra los banderines sin que se salgan */
+  animation-duration: 2s;     /* Ajusta la duración de la animación */
+}
+
+.banderines-izquierda {
+  left: -50px;                /* Ajusta la posición izquierda */
+}
+
+.banderines-derecha {
+  right: -50px;               /* Ajusta la posición derecha */
+}
+
+/* Animaciones de ondeo */
+@keyframes ondeo {
+  0% { transform: rotate(-45deg) translateY(0px); }
+  50% { transform: rotate(-43deg) translateY(15px); }
+  100% { transform: rotate(-45deg) translateY(0px); }
+}
+
+@keyframes ondeo-derecha {
+  0% { transform: rotate(45deg) translateY(0px); }
+  50% { transform: rotate(43deg) translateY(15px); }
+  100% { transform: rotate(45deg) translateY(0px); }
+}
+
+
+}
+
+
+
+/*Div reproductor*/
+.contenedor-reproductor {
+  display: grid;
+  place-items: center; /* Centra horizontal y verticalmente */
+  min-height: 115vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Estilos del reproductor (sin cambios) */
+.reproductor {
+  background-color: #F7C6D7;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  padding-bottom: 2rem;
+}
+
+/* Resto de los estilos del reproductor (sin cambios) */
+.reproductor h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FF4081;
+  font-family: 'Baloo 2', cursive;
+  margin-bottom: 15px;
+}
+
+.boton-reproducir {
+  font-family: 'Baloo 2', cursive;
+  background-color: #FF4081;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-reproducir:hover {
+  background-color: #F50057;
+}
+
+.audio-player {
+  margin-top: 20px;
+}
+
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #FF4081;
+  height: 8px;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.control-volumen, p {
+  margin-top: 10px;
+  font-family: 'Baloo 2', cursive;
+  color: #000000;
+}
+
+.icono {
+  font-size: 2rem;
+  color: #FF4081;
+  cursor: pointer;
+}
+
+/* Estilos para el botón "Siguiente" */
+.boton-siguiente {
+  font-family: 'Baloo 2', cursive;
+  background-color: #07bb52;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.boton-siguiente:hover {
+  background-color: #11e964;
+}
+
+/* Medias para el reproductor */
+@media (max-width: 480px) {
+
+  .contenedor-reproductor {
+    display: grid;
+    place-items: center; /* Centra horizontal y verticalmente */
+    padding: 10px;        /* Agrega un poco de espacio alrededor para evitar que el reproductor toque los bordes */
+    overflow: hidden;     /* Evita que los elementos se desborden */
+    margin-top: -38rem;
+  }
+
+  .reproductor {
+    background-color: #F7C6D7;
+    padding: 15px;                /* Reduce el padding para que no ocupe tanto espacio */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;                  /* Asegura que el reproductor ocupe todo el espacio disponible */           /* Limita el ancho máximo */
+    box-sizing: border-box;      /* Asegura que el padding se incluya en el ancho */
+    position: relative;
+    top: 5rem;
+  }
+
+  .reproductor h1 {
+    font-size: 1.3rem;          /* Reduce el tamaño de la fuente para pantallas más pequeñas */
+    font-weight: bold;
+    color: #FF4081;
+    font-family: 'Chewy', cursive;
+    margin-bottom: 10px;        /* Ajusta el margen inferior para que no se vea demasiado separado */
+  }
+
+  .boton-reproducir {
+    font-family: 'Baloo 2';
+    background-color: #FF4081;
+    border: none;
+    padding: 8px 16px;          /* Reducido el tamaño del padding para que el botón no ocupe tanto espacio */
+    font-size: 1rem;            /* Reducido el tamaño de la fuente */
+    border-radius: 20px;        /* Ajustado el radio de bordes */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90%;                /* Asegura que el botón ocupe el 100% del contenedor */       /* Limita el ancho máximo para evitar que se haga demasiado grande */
+    margin: 10px 0;             /* Agrega margen vertical para separar los botones */
+  }
+
+  .audio-player {
+    margin-top: 15px; /* Reducido el margen superior para ajustar el espacio en pantallas pequeñas */
+  }
+
+  input[type="range"] {
+    height: 6px; /* Reducir la altura del slider */
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 16px; /* Reducir el tamaño del thumb */
+    height: 16px; /* Reducir el tamaño del thumb */
+  }
+
+  .control-volumen, p {
+    margin-top: 8px; /* Reducir el margen superior en pantallas pequeñas */
+    font-size: 1rem; /* Reducir el tamaño de la fuente para ajustarse mejor */
+  }
+
+  .icono {
+    font-size: 1.5rem; /* Reducir el tamaño del icono */
+  }
+
+  .boton-siguiente {
+    font-family: 'Baloo 2';
+    font-size: 1rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    padding: 8px 16px; /* Ajustar el padding para que se vea mejor */
+    margin-top: 8px; /* Reducir el margen superior */
+    width: 90%;           /* Asegura que el botón ocupe el 100% del contenedor */
+  }
+
+  .control-volumen {
+    font-family: 'Baloo 2';
+  }
+}
+
+
+/*contador*/
+#contador {
+  color: #ffeb33;
+  font-weight: bold;
+  font-size: 3.5rem;
+  font-family: 'Chewy', cursive;
+}
+
+.contador-container {
+  position: absolute; /* Para moverlo libremente */
+  bottom: 1rem; /* Lo coloca a 1rem de la parte inferior */
+  left: 50%; /* Centrado horizontal */
+  transform: translateX(-50%); /* Ajusta el centrado */
+  text-align: center;
+  margin-top: 2rem;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #EB57A2;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  width: 70%;
+}
+
+/* Resto del estilo del contador (sin cambios) */
+.titulo {
+  font-family: 'Baloo 2', cursive;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.contador {
+  font-size: 50px;
+  color: #ff6347;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+}
+
+.tiempo {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Baloo 2', cursive;
+  padding: 15px 140px; /*Largo y ancho del contenedor del los, dias, horas, minutos y segundos*/
+  background: linear-gradient(135deg, #F4CF48, #F5B671);
+  border-radius: 10px;
+  font-size: 45px;
+  color: #605DA0;
+  max-width: 75px;
+  flex-grow: 1;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+}
+
+.tiempo span {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.tiempo-seccion {
+  display: flex;
+  flex-direction: column; /* Cambié esto a columna para centrar los elementos en vertical */
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  flex: 1;
+  text-align: center; /* Asegura que el texto dentro de cada sección se centre */
+}
+
+
+
+/* Animación de rebote */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.contador {
+  animation: bounce 2s infinite;
+}
+
+
+/*Medias Contador*/
+
+@media (max-width: 480px) {
+
+  #contador {
+    color: #ffeb33;
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  .titulo {
+    font-family: 'Chewy', cursive;
+
+  }
+
+  .contador-container {
+    width: 100%;         /* Aumenta el ancho en pantallas pequeñas */
+    max-width: none;    /* Elimina el límite de ancho máximo */
+    padding: 8px;       /* Reduce el padding para un mejor ajuste */
+    position: relative; /* permite moverlo con top*/
+    top: -13rem;
+    margin-bottom: -10rem;
+    border-radius: 0%;
+  }
+
+  .contador {
+    font-family: 'Chewy', cursive;
+    font-weight: bold;
+    font-size: 30px;     /* Reduce el tamaño de la fuente */
+    margin-bottom: 10px; /* Reduce el margen inferior */
+
+
+  }
+
+  .tiempo {
+    padding: 10px 10px;   /* Reduce el padding */
+    font-size: 25px;      /* Reduce el tamaño de la fuente */
+    max-width: 75px;      /* Limita el tamaño máximo */
+    font-family: 'Chewy', cursive;
+
+  }
+
+  .tiempo span {
+    font-size: 16px; /* Reduce el tamaño del texto en las secciones */
+    font-family: 'Chewy', cursive;
+    font-weight: bold;
+  }
+
+  .tiempo-seccion {
+    margin: 0 10px;  /* Reduce el margen entre secciones */
+  }
+}
+
+
+
+/*Seccion galeria*/
+
+#galeria {
+  padding: 2rem;
+  background-size: auto; 
+}
+
+.titulo-galeria {
+  font-family: 'Baloo 2' cursive;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.contenedor-galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contenedor-galeria img:hover{
+  transform:scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+ /* Estilo para el contenedor */
+ .contenedor {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 10rem; /* Para centrar la animación en la pantalla */
+    background-color: transparent; /* Fondo gris claro */
+    margin-left: 32rem;
+ }
+
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.contenedor-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contenedor-galeria img:hover{
+    transform:scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Modal: Oculto por defecto */
+.modal {
+  display: flex;
+  flex-direction: column; /* Coloca elementos uno debajo del otro */
+  justify-content: center;
+  align-items: center; /* Centra horizontalmente */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px); /* Efecto de desenfoque */
+  z-index: 1000;
+  overflow: hidden;
+  padding-top: 3rem;
+  opacity: 0;
+  transform: scale(1.5);
+  pointer-events: none; /* Evita interacción cuando está oculto */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  }
+
+  /* Cuando el modal está activo */
+.modal.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto; /* Permite interacción cuando está visible */
+}
+  
+  /* Imagen dentro del modal */
+  .contenedor-modal {
+    max-width: 90%; /* Máximo 90% del ancho de la ventana */
+    max-height: 80%; /* Máximo 80% del alto de la ventana */
+    margin: auto;
+    display: block;
+    border-radius: 10px; /* Esquinas redondeadas opcionales */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para un efecto elegante */
+    object-fit: contain;
+  }
+  
+  /* Botón para cerrar el modal */
+  .close {
+    margin-top: 80px; /* Espaciado entre la imagen y el botón */
+    margin: 80px auto;
+    color: black;
+    font-size: 60px; /* Tamaño del texto */
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100;
+    width: 70px; /* Tamaño del botón circular */
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.527); /* Fondo semitransparente */
+    border-radius: 50%; /* Hacerlo circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    align-self: center; /* Centrar el botón horizontalmente */
+  }
+  
+  .close:hover {
+    background-color: rgba(255, 230, 0, 0.644); /* Cambiar el fondo al pasar el mouse */
+    color: rgba(0, 0, 0, 0.815); /* Cambia el color de la 'X' */
+    transform: scale(1.5); /* Agranda ligeramente el botón al pasar el mouse */
+  }
+
+
+/* Media Query para Galeria */
+@media (max-width: 480px) {
+  /* Ajustes para el título de la galería */
+  .titulo-galeria {
+    font-family: 'Chewy', cursive;
+    font-size: 2.5rem; /* Reduce el tamaño del título */
+    margin-bottom: 1.5rem; /* Reduce el margen */
+  }
+
+  /* Cambiar la disposición de las imágenes en la galería */
+  .contenedor-galeria {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas pequeñas */
+    gap: 0.5rem; /* Reduce el espacio entre imágenes */
+  }
+
+  /* Hacer las imágenes más pequeñas */
+  .contenedor-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Esquinas menos redondeadas */
+  }
+
+  /* Ajustes en el modal */
+  .contenedor-modal {
+    max-width: 80%; /* Reduce el tamaño máximo de la imagen */
+    max-height: 70%; /* Reduce el tamaño máximo de la imagen */
+  }
+
+  .close {
+    font-size: 40px; /* Reduce el tamaño del botón */
+    width: 50px;
+    height: 50px;
+  }
+
+  .close:hover {
+    transform: scale(1.3); /* Agranda un poco el botón en hover */
+  }
+}
+
+
+
+
+/* Sección Detalles de la Fiesta Infantil */
+#fiesta-infantil {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.texto-reventar {
+  font-family: 'Baloo 2' cursive;
+  padding: 1.5rem 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+/* Globo flotante */
+.globo {
+  position: relative;
+  display: inline-block;
+  animation: flotar 3s ease-in-out infinite;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  margin-top: 3rem;
+}
+
+.imagen-globo {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+/* Animación de flotado */
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Efecto de explosión */
+.globo.reventar .imagen-globo {
+  animation: explotar 0.5s forwards;
+}
+
+@keyframes explotar {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.8; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+
+/* Dirección (oculta al inicio) */
+.direccion-fiestas {
+  display: none;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: #ff6f61;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+/*Media querys fiesta infantil*/
+@media (max-width: 480px) {
+  /* Sección Detalles de la Fiesta Infantil */
+  #fiesta-infantil {
+    text-align: center;
+    margin-top: 3rem; /* Reducimos el margen superior para pantallas más pequeñas */
+  }
+
+  /* Texto principal */
+  .texto-reventar {
+    font-family: 'Chewy', cursive;
+    padding: 1rem 1rem; /* Reducimos el padding para ajustarse a pantallas pequeñas */
+    font-size: 2rem; /* Reducimos el tamaño de la fuente */
+    color: #fff;
+    margin-bottom: 1.5rem; /* Reducimos el margen inferior */
+  }
+
+  /* Globo flotante */
+  .globo {
+    width: 120px; /* Reducimos el tamaño del globo */
+    height: 120px;
+    margin-top: 2rem; /* Reducimos el margen superior */
+  }
+
+  .imagen-globo {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease;
+  }
+
+  /* Animación de flotado */
+  @keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Reducimos el movimiento de flotado */
+  }
+
+  /* Efecto de explosión */
+  .globo.reventar .imagen-globo {
+    animation: explotar 0.5s forwards;
+  }
+
+  @keyframes explotar {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; } /* Reducimos la escala de la explosión */
+    100% { transform: scale(0); opacity: 0; }
+  }
+
+  /* Dirección (visible en pantallas pequeñas) */
+  .direccion-fiestas {
+    display: block; /* Asegura que la dirección sea visible */
+    font-size: 1rem; /* Reducimos el tamaño de la fuente */
+    margin-top: 1rem; /* Reducimos el margen superior */
+    color: #ff6f61;
+    background-color: #fff;
+    padding: 0.8rem; /* Reducimos el padding */
+    border-radius: 8px; /* Ajustamos el radio del borde */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reducimos la sombra */
+    opacity: 1; /* Aseguramos que la dirección sea completamente visible */
+    transition: opacity 0.5s ease-in-out; /* Ajustamos la transición */
+  }
+}
+
+
+
+/* Sección de direcciones */
+#event-locations {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-size: auto;
+}
+
+/* Título */
+.event-locations h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Descripción */
+.event-locations p {
+  font-size: 2rem;
+  color: black;
+  font-family: 'Baloo 2', cursive;
+  margin-bottom: 2rem;
+}
+
+/* Galería de tarjetas */
+.location-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Contenedor principal de cada tarjeta */
+.location-card {
+  width: 220px;
+  height: 280px;
+  position: relative;
+  perspective: 1000px;
+}
+
+/* Caja interna que girará */
+.location-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Efecto de giro al pasar el mouse */
+.location-card:hover .location-inner {
+  transform: rotateY(180deg);
+}
+
+/* Parte delantera y trasera */
+.location-front, .location-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Parte delantera */
+.location-front {
+  z-index: 2;
+}
+
+/* Parte trasera */
+.location-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg,#ffffff, #62d1ac);
+  font-family: 'Lora', serif;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Imágenes */
+.location-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* Texto debajo de las imágenes */
+.location-card p {
+  font-size: 1.3rem;
+  color: black;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+}
+
+/* Estilo personalizado para el botón */
+.custom-button {
+  background-color: #fa5040;  /* Color de fondo */
+  color: white;  /* Color del texto */
+  padding: 10px 20px;  /* Espaciado interno (alto y ancho) */
+  font-size: 1rem;  /* Tamaño de fuente */
+  font-weight: bold;  /* Negrita */
+  border-radius: 5px;  /* Bordes redondeados */
+  border: none;  /* Sin borde */
+  cursor: pointer;  /* Cambiar el cursor a puntero cuando pase sobre el botón */
+  transition: background-color 0.3s;  /* Efecto de transición para el color */
+}
+
+.custom-button:hover {
+  background-color: #4fe581;  /* Color cuando el botón se pasa el mouse */
+}
+
+
+/* Media Query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+  /* Sección de direcciones */
+  #event-locations {
+    padding: 2rem 1rem;
+  }
+
+  /* Título */
+  .event-locations h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  /* Descripción */
+  .event-locations p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Chewy', cursive;
+
+  }
+
+  /* Galería de tarjetas centrada */
+  .location-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centra las cards horizontalmente */
+    gap: 1rem;
+  }
+
+  /* Contenedor principal de cada tarjeta */
+  .location-card {
+    width: 180px;
+    height: 240px;
+    max-width: 100%;  /* Evita que se desborde */
+    margin: 0 auto; /* Centra las cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Alinea el contenido en el centro verticalmente */
+    align-items: center;  /* Centra los elementos horizontalmente */
+  }
+
+  /* Parte trasera */
+  .location-back {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centra los elementos dentro */
+    align-items: center;      /* Centra los elementos dentro */
+    text-align: center;       /* Centra el texto */
+    width: 100%;
+  }
+
+  /* Imágenes en tarjetas */
+  .location-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Texto debajo de las imágenes */
+  .location-card p {
+    font-size: 1.1rem;
+  }
+
+  /* Asegura que el <a> y el <button> no se desborden */
+  .location-back a {
+    display: flex;  /* Usamos flexbox aquí para centrar el contenido */
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    width: 100%;  /* Ocupa el 100% del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+  }
+
+  /* Ajuste del botón para que ocupe el 80% del contenedor, sin desbordarse */
+  .location-back .button.is-primary {
+    width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
+    max-width: 200px;  /* Limita el tamaño máximo para evitar que se estire demasiado */
+    padding: 12px 20px; /* Ajusta el padding del botón */
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+    text-align: center; /* Centra el texto dentro del botón */
+    margin-top: 1rem; /* Ajusta un poco el margen para separación */
+    box-sizing: border-box; /* Asegura que padding y bordes estén dentro del ancho */
+  }
+}
+
+
+
+
+
+/* Estilo general para la sección seleccionar fotos */
+.contenedor-subir-fotos {
+  display: grid;
+  place-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Título principal */
+.title-upload-photos {
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+  font-weight: bold;
+  font-size: 3.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  color: #FFF;
+}
+
+/* Texto descriptivo */
+.texto-subir-fotos {
+  text-align: center;
+  font-weight: bold;
+  padding: 2.5rem 2.5rem;
+  font-size: 2.3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  color: #FFF;
+}
+
+.frase-texto {
+  margin-top: auto;
+  font-family: 'Baloo 2', cursive;
+}
+
+.texto-info {
+  padding-top: 3rem;
+  font-size: 1.3rem;
+  font-family: 'sans-serif';
+  font-weight: lighter;
+  color: #FFF;
+  font-family: 'Baloo 2', cursive;
+}
+
+/* Contenedor del formulario */
+.contenedor-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.726);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ocultar input de archivo */
+form input[type="file"] {
+  display: none;
+}
+
+/* Etiqueta personalizada y botón con fondo visible */
+label, button {
+  display: inline-block;
+  background-color: #00b7ff;  /* Fondo visible desde el inicio */
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 220px;  /* Mantener el mismo tamaño para ambos botones */
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+}
+
+/* Hover y efectos */
+label:hover, button:hover {
+  background-color: #ff235a;
+  transform: translateY(-2px);
+}
+
+label:active, button:active {
+  transform: translateY(0);
+}
+
+button {
+  margin-top: 20px;
+}
+
+.upload-button {
+  background-color: #07bb52;
+  color: #FFF;
+  margin-top: 2rem;
+  padding: 12px 20px;
+  font-family: 'Baloo 2', cursive;
+}
+
+.upload-button:hover {
+  background-color: #de23cf;
+  transform: translateY(-2px);
+}
+
+/* Mensaje de estado */
+#statusMessage {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+  display: none;  /* Oculto por defecto */
+  max-width: 80%;
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+}
+
+#fileList {
+  margin-top: 10px;
+  max-width: 80%;
+  text-align: left;
+}
+
+#fileList p {
+  color: #fff;
+  background-color: #ff446d;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px 0;
+  font-family: 'Baloo 2', cursive;
+
+}
+
+/* Animación sutil para la sección */
+#subir-fotos {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pastel-plimplim {
+  width: 130px;
+  height: 130px;
+  margin-top: 20px;
+  align-self:flex-start;
+
+  animation: flotar 3s infinite ease-in-out;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: scaleX(-1) translateY(0);
+  }
+  50% {
+    transform: scaleX(-1) translateY(-20px); /*Sube 20 px*/
+  }
+}
+
+.cerdito-trompeta {
+  width: 140px;
+  height: 130px;
+  transform: scaleX(-1);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-top: 20px;
+
+  /* Animación de balanceo infinita */
+  animation: balanceo 2s infinite ease-in-out;
+}
+
+@keyframes balanceo {
+  0%, 100% {
+    transform: scaleX(-1) rotate(0deg);
+  }
+  25% {
+    transform: scaleX(-1) rotate(2deg); /* Inclina a la derecha */
+  }
+  75% {
+    transform: scaleX(-1) rotate(-10deg); /* Inclina a la izquierda */
+  }
+}
+
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #514b82;
+  -webkit-mask: radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+  transform-origin: 50% 40%;
+  animation: l25 1s infinite linear;
+}
+@keyframes l25 {
+  100% {transform: rotate(1turn)}
+}
+
+#statusMessage {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del loader */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#fileList {
+  margin-top: 1rem;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+#fileList p {
+  margin: 0.5rem 0;
+}
+
+
+
+
+/*Media querys para subir fotos*/
+/* Media Query para pantallas de 480px o menos */
+@media (max-width: 480px) {
+
+  /* Sección contenedor-subir-fotos */
+  .contenedor-subir-fotos {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Título principal */
+  .title-upload-photos {
+    font-family: 'Chewy', cursive;
+    font-size: 2.5rem;
+    padding-top: 7rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Texto descriptivo */
+  .texto-subir-fotos {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  .frase-texto {
+    font-size: 1.5rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  .texto-info {
+    padding-top: 2rem;
+    font-size: 1.1rem;
+    font-family: 'Chewy';
+  }
+
+  /* Contenedor del formulario */
+  .contenedor-form {
+    padding: 1rem;
+  }
+
+  form {
+    width: 90%;
+    padding: 20px;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Etiqueta personalizada y botón */
+  label, button {
+    font-size: 14px;
+    padding: 10px 15px;
+    min-width: 180px;
+    font-family: 'Chewy', cursive;
+  }
+
+  button {
+    margin-top: 15px;
+  }
+
+  .upload-button {
+    padding: 10px 15px;
+    margin-top: 1.5rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  /* Mensaje de estado: Archivo subido exitosamente */
+  #statusMessage {
+    color: #000;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  #fileList {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  #fileList p {
+    padding: 4px;
+    font-size: 1rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  /* Ajustes para imágenes y animaciones */
+  .pastel-plimplim {
+    width: 90px;
+    height: 90px;
+    margin-top: 15px;
+  }
+
+  .cerdito-trompeta {
+    width: 100px;
+    height: 90px;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  /* Loader */
+  .loader {
+    width: 80px;
+    font-family: 'Chewy', cursive;
+  }
+
+  /* Contenedor del loader */
+  .status-container {
+    padding: 1rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  .subiendo-archivos {
+    font-family: 'Chewy', cursive;
+  }
+}
+
+
+
+
+
+#confirmar-asistencia {
+  position: relative;
+  padding: 4rem 2rem; /* Ajustado para mejor adaptación */
+  text-align: center; /* Centra el contenido */
+}
+
+/* Contenedor de confirmación */
+.confirmacion {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 12px;
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra más ligera */
+}
+
+/* Título */
+.titulo-confirmacion {
+  font-family: 'Baloo 2', cursive;
+  font-size: 2.5rem;
+  color: #2b2b2b; /* Color más oscuro para mejor lectura */
+  margin-bottom: 1.2rem;
+}
+
+/* Texto de confirmación */
+.texto-confirmacion {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.1rem;
+  color: #444; /* Un poco más oscuro */
+  margin-bottom: 2rem;
+}
+
+/* Botón Confirmar */
+.boton-confirmar {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 18px;
+  color: white;
+  background-color: #25D366; /* Verde WhatsApp */
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Baloo 2', cursive;
+}
+
+/* Efecto hover */
+.boton-confirmar:hover {
+  background-color: #1ebd5a;
+  transform: scale(1.05);
+}
+
+/* Imagen de plimplim */
+
+.plimplim-esquina {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.cerdito-granjero {
+  position: absolute;
+  bottom: 0;
+  margin-left: 0.5rem;
+  left: 0;
+  width: 350px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+
+
+/* Media query para Confirmacion de asistencia */
+@media (max-width: 480px) {
+  #confirmar-asistencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .confirmacion {
+    padding: 1rem;
+    height: 55vh;
+    width: 80%;
+  }
+
+  .titulo-confirmacion {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  .texto-confirmacion {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    padding-bottom: 5px;
+    font-family: 'Baloo 2';
+    font-weight: bold;
+
+  }
+
+  .boton-confirmar {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-top: 0.5rem;
+    font-family: 'Chewy', cursive;
+  }
+
+  .plimplim-esquina {
+    margin-bottom: 2rem;
+    width: 120px;
+    height: 120px;
+    margin-right: 0;
+  }
+
+  .cerdito-granjero {
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+    width: 120px;
+    height: 120px;
+    margin-top: 1rem;
+  }
+}
+
