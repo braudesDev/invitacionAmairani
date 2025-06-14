@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'New Kids';
+  src: url('/fonts/New\ Kids.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +17,11 @@
 html, body {
     overflow-x: hidden; /* Esto asegura que no haya scroll horizontal */
     margin: 0; /* Evitar cualquier margen por defecto */
+    padding: 0;
 }
 
 body {
-  background: linear-gradient(135deg, #f797af, #a58ad6);
+  background: linear-gradient(135deg, #ff87a5, #8f66db);
   min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
   background-attachment: fixed; /* Fondo fijo para evitar cortes al hacer scroll */
 }
@@ -513,11 +522,13 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Resto del estilo del contador (sin cambios) */
 .titulo {
-  font-family: 'Baloo 2', cursive;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #ffffff;
-  margin-bottom: 20px;
+  font-family: 'New Kids', cursive;
+  font-size: 2rem;
+  color: #f1ee05e3;
+  font-weight: lighter;
+  text-align: center;
+  text-shadow: 2px 2px 0 #0000006c;
+
 }
 
 .contador {
@@ -646,12 +657,12 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .titulo-galeria {
-  font-family: 'Baloo 2' cursive;
-  font-weight: bold;
+  font-family: 'New Kids', cursive;
+  font-size: 4rem;
+  color: #ff014d;
   text-align: center;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  color: #fff;
+  text-shadow: 2px 2px 0 #0000006c;
+  margin: 3rem 1rem;
 }
 
 .contenedor-galeria {
@@ -783,9 +794,13 @@ input[type="range"]::-webkit-slider-thumb {
 @media (max-width: 480px) {
   /* Ajustes para el título de la galería */
   .titulo-galeria {
-    font-family: 'Chewy', cursive;
-    font-size: 2.5rem; /* Reduce el tamaño del título */
-    margin-bottom: 1.5rem; /* Reduce el margen */
+  font-family: 'New Kids', cursive;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  color: #ff014d;
+  text-align: center;
+  text-shadow: 2px 2px 0 #0000006c;
+  margin: 3rem 1rem;
   }
 
   /* Cambiar la disposición de las imágenes en la galería */
@@ -818,7 +833,26 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
+/*Seccion de los padrinos*/
+.titulo-padrinos {
+  font-family: 'New Kids', cursive;
+  font-size: 2.5rem;
+  color: #ff014d;
+  text-align: center;
+  text-shadow: 2px 2px 0 #0000006c;
+  margin: 3rem 1rem;
 
+}
+
+.nombres-padrinos {
+    text-align: center;
+    font-family: 'Chewy', sans-serif !important;
+    font-size: 1.8rem;
+    color: #000000 !important;
+    margin: 0 auto;
+    max-width: 80%;
+    line-height: 1.4;
+}
 
 
 /* Sección Detalles de la Fiesta Infantil */
@@ -958,12 +992,13 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* Título */
-.event-locations h2 {
-  font-family: 'Baloo 2', cursive;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 1rem;
+.titulo-celebracion {
+  font-family: 'New Kids', cursive;
+  font-size: 4rem;
+  color: #ff014d;
+  text-align: center;
+  text-shadow: 2px 2px 0 #0000006c;
+  margin: 3rem 1rem;
 }
 
 /* Descripción */
@@ -1029,7 +1064,7 @@ input[type="range"]::-webkit-slider-thumb {
 /* Parte trasera */
 .location-back {
   transform: rotateY(180deg);
-  background: linear-gradient(135deg,#ffffff, #62d1ac);
+  background: linear-gradient(135deg,#ffffff, #ffe3d0);
   font-family: 'Lora', serif;
   padding: 1rem;
   font-size: 1.3rem;
@@ -1053,7 +1088,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Estilo personalizado para el botón */
 .custom-button {
-  background-color: #fa5040;  /* Color de fondo */
+  background-color: #70462a;  /* Color de fondo */
   color: white;  /* Color del texto */
   padding: 10px 20px;  /* Espaciado interno (alto y ancho) */
   font-size: 1rem;  /* Tamaño de fuente */
@@ -1065,7 +1100,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .custom-button:hover {
-  background-color: #4fe581;  /* Color cuando el botón se pasa el mouse */
+  background-color: #b64900;  /* Color cuando el botón se pasa el mouse */
 }
 
 
@@ -1077,11 +1112,14 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   /* Título */
-  .event-locations h2 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-    font-family: 'Chewy', cursive;
-  }
+.titulo-celebracion {
+  font-family: 'New Kids', cursive;
+  font-size: 2.5rem;
+  color: #ff014d;
+  text-align: center;
+  text-shadow: 2px 2px 0 #0000006c;
+  margin: 3rem 1rem;
+}
 
   /* Descripción */
   .event-locations p {

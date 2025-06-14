@@ -52,6 +52,12 @@
     
     <!-- Importa las fuentes 'Dancing Script' y 'Satisfy' desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Satisfy&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
     
     <!-- Enlace a la biblioteca AOS (Animate On Scroll) para efectos de animación al desplazarse -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
@@ -86,6 +92,7 @@
             <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983350/banderines_kmhskv.svg" alt="Banderines" class="banderines-izquierda">
             <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983350/banderines_kmhskv.svg" alt="Banderines" class="banderines-derecha">
             
+            
         </div>
 
 
@@ -95,7 +102,7 @@
                 <h1>¡Si quieres puedes escuchar la música que me gusta!</h1>
 
                 <!-- Botón de reproducción -->
-                <button class="boton-reproducir" onclick="playAudio()">Reproducir</button>
+                <button class="boton-reproducir">Reproducir</button>
 
                 <!-- Reproductor de audio -->
                 <audio id="musica" class="audio-player" preload="auto">
@@ -110,7 +117,7 @@
 
                 <!-- Controles de música -->
                 <div>
-                    <button class="boton-siguiente" onclick="nextSong()">Siguiente</button>
+                    <button class="boton-siguiente">Siguiente</button>
                 </div>
             </div>
         </div>
@@ -163,11 +170,10 @@
     </section>
 
 
-
     <!-- Seccion fiesta infantil -->
 
     <section id="fiesta-infantil">
-        <h1 class="texto-reventar">¡Revienta el globo para ver la dirección del evento! 🎈</h1>
+        <h1 class="texto-reventar">¡Revienta el globo para ver la dirección del evento!</h1>
         
         <div class="globo" id="globo">
             <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983356/balloon_lptqq3.png" alt="Globo" class="imagen-globo">
@@ -178,7 +184,7 @@
 
     <!-- Sección de Dirección (oculta inicialmente) -->
     <section id="event-locations" class="event-locations" style="display: none;">
-        <h2 class="titulo-celebracion">¡Aquí será la celebración!</h2>
+        <h2 class="titulo-celebracion" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700">¡Aquí será la celebración!</h2>
         <p class="texto-celebracion">Estas son las direcciones de los lugares donde se llevarán a cabo la misa y la fiesta.</p>
 
         <div class="location-gallery">
@@ -215,6 +221,12 @@
                 </div>
             </div>
         </div>
+
+        <div class="contenedor-padrinos">
+            <h2 class="titulo-padrinos" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700" >Mis Padrinos:</h2>
+            <p class="nombres-padrinos">Maria De Los Angeles Robledo Segura <br> & <br> Omar Abraham Rodriguez Garcia</p>
+        </div>
+
     </section>
     
 
