@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'New Kids';
-  src: url('/fonts/New\ Kids.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -344,12 +336,12 @@ body::before {
   font-size: 1.8rem;
   font-weight: bold;
   color: #FF4081;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   margin-bottom: 15px;
 }
 
 .boton-reproducir {
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   background-color: #FF4081;
   color: #fff;
   border: none;
@@ -390,7 +382,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .control-volumen, p {
   margin-top: 10px;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   color: #000000;
 }
 
@@ -402,7 +394,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Estilos para el botón "Siguiente" */
 .boton-siguiente {
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   background-color: #07bb52;
   color: #fff;
   border: none;
@@ -450,7 +442,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .boton-reproducir {
-    font-family: 'Baloo 2';
+    font-family: 'Chewy', cursive;
     background-color: #FF4081;
     border: none;
     padding: 8px 16px;          /* Reducido el tamaño del padding para que el botón no ocupe tanto espacio */
@@ -485,7 +477,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .boton-siguiente {
-    font-family: 'Baloo 2';
+    font-family: 'Chewy';
     font-size: 1rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
     padding: 8px 16px; /* Ajustar el padding para que se vea mejor */
     margin-top: 8px; /* Reducir el margen superior */
@@ -493,7 +485,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .control-volumen {
-    font-family: 'Baloo 2';
+    font-family: 'Chewy';
   }
 }
 
@@ -522,7 +514,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Resto del estilo del contador (sin cambios) */
 .titulo {
-  font-family: 'New Kids', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 2rem;
   color: #f1ee05e3;
   font-weight: lighter;
@@ -540,13 +532,13 @@ input[type="range"]::-webkit-slider-thumb {
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 .tiempo {
   display: flex;
   flex-direction: column;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   padding: 15px 140px; /*Largo y ancho del contenedor del los, dias, horas, minutos y segundos*/
   background: linear-gradient(135deg, #F4CF48, #F5B671);
   border-radius: 10px;
@@ -657,7 +649,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .titulo-galeria {
-  font-family: 'New Kids', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 4rem;
   color: #ff014d;
   text-align: center;
@@ -794,7 +786,7 @@ input[type="range"]::-webkit-slider-thumb {
 @media (max-width: 480px) {
   /* Ajustes para el título de la galería */
   .titulo-galeria {
-  font-family: 'New Kids', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 2.5rem;
   font-weight: lighter;
   color: #ff014d;
@@ -835,7 +827,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 /*Seccion de los padrinos*/
 .titulo-padrinos {
-  font-family: 'New Kids', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 2.5rem;
   color: #ff014d;
   text-align: center;
@@ -862,7 +854,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .texto-reventar {
-  font-family: 'Baloo 2' cursive;
+  font-family: 'Chewy' cursive;
   padding: 1.5rem 1.5rem;
   font-size: 2.5rem;
   font-weight: bold;
@@ -993,7 +985,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Título */
 .titulo-celebracion {
-  font-family: 'New Kids', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 4rem;
   color: #ff014d;
   text-align: center;
@@ -1005,7 +997,7 @@ input[type="range"]::-webkit-slider-thumb {
 .event-locations p {
   font-size: 2rem;
   color: black;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   margin-bottom: 2rem;
 }
 
@@ -1081,14 +1073,14 @@ input[type="range"]::-webkit-slider-thumb {
 /* Texto debajo de las imágenes */
 .location-card p {
   font-size: 1.3rem;
-  color: black;
+  color: rgb(0, 99, 248);
   font-weight: bold;
   font-family: 'Lora', serif;
 }
 
 /* Estilo personalizado para el botón */
 .custom-button {
-  background-color: #70462a;  /* Color de fondo */
+  background-color: #12bddb;  /* Color de fondo */
   color: white;  /* Color del texto */
   padding: 10px 20px;  /* Espaciado interno (alto y ancho) */
   font-size: 1rem;  /* Tamaño de fuente */
@@ -1113,7 +1105,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   /* Título */
 .titulo-celebracion {
-  font-family: 'New Kids', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 2.5rem;
   color: #ff014d;
   text-align: center;
@@ -1206,7 +1198,7 @@ input[type="range"]::-webkit-slider-thumb {
 /* Título principal */
 .title-upload-photos {
   text-align: center;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   font-weight: bold;
   font-size: 3.5rem;
   padding-top: 3rem;
@@ -1227,7 +1219,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .frase-texto {
   margin-top: auto;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 .texto-info {
@@ -1236,7 +1228,7 @@ input[type="range"]::-webkit-slider-thumb {
   font-family: 'sans-serif';
   font-weight: lighter;
   color: #FFF;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 /* Contenedor del formulario */
@@ -1278,7 +1270,7 @@ label, button {
   transition: background-color 0.3s ease, transform 0.2s ease;
   min-width: 220px;  /* Mantener el mismo tamaño para ambos botones */
   text-align: center;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 /* Hover y efectos */
@@ -1300,7 +1292,7 @@ button {
   color: #FFF;
   margin-top: 2rem;
   padding: 12px 20px;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 .upload-button:hover {
@@ -1317,7 +1309,7 @@ button {
   display: none;  /* Oculto por defecto */
   max-width: 80%;
   text-align: center;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 #fileList {
@@ -1332,7 +1324,7 @@ button {
   padding: 5px;
   border-radius: 10px;
   margin: 5px 0;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
 
 }
 
@@ -1409,7 +1401,7 @@ button {
 #statusMessage {
   margin-top: 2rem;
   text-align: center;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 1.5rem;
   font-weight: bold;
   width: 100%;
@@ -1430,7 +1422,7 @@ button {
 
 #fileList {
   margin-top: 1rem;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 1.2rem;
   color: #333;
 }
@@ -1582,7 +1574,7 @@ button {
 
 /* Título */
 .titulo-confirmacion {
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 2.5rem;
   color: #2b2b2b; /* Color más oscuro para mejor lectura */
   margin-bottom: 1.2rem;
@@ -1590,7 +1582,7 @@ button {
 
 /* Texto de confirmación */
 .texto-confirmacion {
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 1.1rem;
   color: #444; /* Un poco más oscuro */
   margin-bottom: 2rem;
@@ -1607,7 +1599,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 /* Efecto hover */
@@ -1667,7 +1659,7 @@ button {
     font-size: 1rem;
     padding: 0.5rem;
     padding-bottom: 5px;
-    font-family: 'Baloo 2';
+    font-family: 'Chewy';
     font-weight: bold;
 
   }
