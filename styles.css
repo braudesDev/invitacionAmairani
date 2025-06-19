@@ -1,15 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* Evitar el scroll horizontal */
-html, body {
-    overflow-x: hidden; /* Esto asegura que no haya scroll horizontal */
-    margin: 0; /* Evitar cualquier margen por defecto */
-    padding: 0;
+html,
+body {
+  overflow-x: hidden; /* Esto asegura que no haya scroll horizontal */
+  margin: 0; /* Evitar cualquier margen por defecto */
+  padding: 0;
 }
 
 body {
@@ -29,19 +29,17 @@ body::before {
   background-size: cover; /* La imagen cubre todo el contenedor */
   background-position: center center; /* Asegura que la imagen siempre esté centrada */
   z-index: -1;
-
 }
-
 
 /*Seccion pantalla principal*/
 @keyframes caerConfeti {
   0% {
-      transform: translateY(-100px); /* Comienza fuera de la pantalla */
-      opacity: 1;
+    transform: translateY(-100px); /* Comienza fuera de la pantalla */
+    opacity: 1;
   }
   100% {
-      transform: translateY(100vh); /* Llega hasta el fondo de la pantalla */
-      opacity: 0; /* Desaparece al llegar al fondo */
+    transform: translateY(100vh); /* Llega hasta el fondo de la pantalla */
+    opacity: 0; /* Desaparece al llegar al fondo */
   }
 }
 
@@ -50,7 +48,7 @@ body::before {
   top: 0;
   left: 50%;
   width: 15px; /* Ajusta el tamaño para que sea un poco más grande */
-  height: 15px; 
+  height: 15px;
   background-color: #48ff00; /* Color de confeti rosa por defecto */
   border-radius: 3px; /* Bordes redondeados para que parezca más "papel" */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para simular un efecto 3D */
@@ -87,7 +85,6 @@ body::before {
   animation-delay: 2s; /* Retraso aleatorio */
 }
 
-
 /*Medias Confetti*/
 
 /* Media Query para pantallas de 480px o menos */
@@ -96,10 +93,7 @@ body::before {
     width: 10px; /* Reduce el tamaño del confeti en pantallas pequeñas */
     height: 10px;
   }
-
 }
-
-
 
 /* Animacion de abejita */
 .abejita-animacion {
@@ -114,25 +108,24 @@ body::before {
 
 @keyframes volar {
   0% {
-      transform: translateX(-100%) rotateY(0deg); /* Empieza a la izquierda con el perfil normal */
+    transform: translateX(-100%) rotateY(0deg); /* Empieza a la izquierda con el perfil normal */
   }
   45% {
-      transform: translateX(90vw) translateY(20px) rotateY(0deg); /* La abeja llega a la mitad de su trayecto, ligeramente hacia abajo */
+    transform: translateX(90vw) translateY(20px) rotateY(0deg); /* La abeja llega a la mitad de su trayecto, ligeramente hacia abajo */
   }
   50% {
-      transform: translateX(100vw) translateY(-20px) rotateY(180deg); /* La abeja llega al final y se voltea */
+    transform: translateX(100vw) translateY(-20px) rotateY(180deg); /* La abeja llega al final y se voltea */
   }
   55% {
-      transform: translateX(100vw) translateY(20px) rotateY(180deg); /* Mantiene el volcado mientras regresa, ligeramente hacia abajo */
+    transform: translateX(100vw) translateY(20px) rotateY(180deg); /* Mantiene el volcado mientras regresa, ligeramente hacia abajo */
   }
   100% {
-      transform: translateX(100%) translateY(0) rotateY(180deg); /* Regresa al inicio con el perfil volcado */
+    transform: translateX(100%) translateY(0) rotateY(180deg); /* Regresa al inicio con el perfil volcado */
   }
 }
 
 /*Medias Abejita*/
-@media (max-width:480px) {
-
+@media (max-width: 480px) {
   .abejita-animacion {
     position: absolute;
     width: 50px; /* Ajusta el tamaño de la abeja */
@@ -145,19 +138,19 @@ body::before {
 
   @keyframes volar {
     0% {
-        transform: translateX(-100%) rotateY(0deg); /* Empieza a la izquierda con el perfil normal */
+      transform: translateX(-100%) rotateY(0deg); /* Empieza a la izquierda con el perfil normal */
     }
     45% {
-        transform: translateX(90vw) translateY(20px) rotateY(0deg); /* La abeja llega a la mitad de su trayecto, ligeramente hacia abajo */
+      transform: translateX(90vw) translateY(20px) rotateY(0deg); /* La abeja llega a la mitad de su trayecto, ligeramente hacia abajo */
     }
     50% {
-        transform: translateX(100vw) translateY(-20px) rotateY(180deg); /* La abeja llega al final y se voltea */
+      transform: translateX(100vw) translateY(-20px) rotateY(180deg); /* La abeja llega al final y se voltea */
     }
     55% {
-        transform: translateX(100vw) translateY(20px) rotateY(180deg); /* Mantiene el volcado mientras regresa, ligeramente hacia abajo */
+      transform: translateX(100vw) translateY(20px) rotateY(180deg); /* Mantiene el volcado mientras regresa, ligeramente hacia abajo */
     }
     100% {
-        transform: translateX(100%) translateY(0) rotateY(180deg); /* Regresa al inicio con el perfil volcado */
+      transform: translateX(100%) translateY(0) rotateY(180deg); /* Regresa al inicio con el perfil volcado */
     }
   }
 }
@@ -173,7 +166,7 @@ body::before {
   text-align: center;
   padding-top: 20px;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative; /* Hace que los elementos hijos se posicionen en relación a este contenedor */
@@ -188,7 +181,6 @@ body::before {
   margin-top: 1rem;
   top: 5px; /* Posiciona el texto en la parte superior del contenedor */
   z-index: 1; /* El texto debe estar encima de la imagen */
-
 }
 
 .imagen-amairani {
@@ -226,92 +218,109 @@ body::before {
 
 /* Animaciones de ondeo */
 @keyframes ondeo {
-  0% { transform: rotate(-45deg) translateY(0px); }
-  50% { transform: rotate(-43deg) translateY(35px); }
-  100% { transform: rotate(-45deg) translateY(0px); }
+  0% {
+    transform: rotate(-45deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-43deg) translateY(35px);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(0px);
+  }
 }
 
 @keyframes ondeo-derecha {
-  0% { transform: rotate(45deg) translateY(0px); }
-  50% { transform: rotate(43deg) translateY(35px); }
-  100% { transform: rotate(45deg) translateY(0px); }
+  0% {
+    transform: rotate(45deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(43deg) translateY(35px);
+  }
+  100% {
+    transform: rotate(45deg) translateY(0px);
+  }
 }
 
-
-
 @media (max-width: 480px) {
-    #principal {
-        position: relative;  /* Mantiene la posición relativa */
-        width: 100%;
-        height: auto;        /* Cambia a auto para que se ajuste al contenido en móviles */
-        overflow-y: auto;    /* Permite el desplazamiento vertical si el contenido es mayor */
-        overflow-x: hidden;  /* Evita el desplazamiento horizontal */
-        padding: 10px;       /* Agrega un poco de espacio interno para mejorar la apariencia en móviles */
-    }
+  #principal {
+    position: relative; /* Mantiene la posición relativa */
+    width: 100%;
+    height: auto; /* Cambia a auto para que se ajuste al contenido en móviles */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido es mayor */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    padding: 10px; /* Agrega un poco de espacio interno para mejorar la apariencia en móviles */
+  }
 
-    .contenedor-invitacion {
-      padding-top: 10px;          /* Reduce el padding para ahorrar espacio en móviles */
-      justify-content: flex-start; /* Alinea los elementos al inicio para mejorar el scroll en móviles */
-      align-items: center;        /* Mantiene la relación para los hijos posicionados */
-      padding-left: 5px;           /* Agrega un padding lateral suave */
-      padding-right: 5px;          /* Igual en el otro lado */
+  .contenedor-invitacion {
+    padding-top: 10px; /* Reduce el padding para ahorrar espacio en móviles */
+    justify-content: flex-start; /* Alinea los elementos al inicio para mejorar el scroll en móviles */
+    align-items: center; /* Mantiene la relación para los hijos posicionados */
+    padding-left: 5px; /* Agrega un padding lateral suave */
+    padding-right: 5px; /* Igual en el otro lado */
   }
 
   .imagen-feliz-cumple {
-    margin-bottom: 1px;         /* Reduce el espacio inferior */
-    padding-bottom: 1px;        /* Reduce el padding inferior */
-    width: 80%;                 /* Ajusta el tamaño al 80% del contenedor */
-    height: auto;               /* Ajusta la altura automáticamente */
-    position: relative;         /* Cambia a relative para que se adapte mejor a pantallas pequeñas */
+    margin-bottom: 1px; /* Reduce el espacio inferior */
+    padding-bottom: 1px; /* Reduce el padding inferior */
+    width: 80%; /* Ajusta el tamaño al 80% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente */
+    position: relative; /* Cambia a relative para que se adapte mejor a pantallas pequeñas */
     margin-top: 1rem;
-    top: 0;                     /* Ajusta la posición superior para que no se desplace mucho */
+    top: 0; /* Ajusta la posición superior para que no se desplace mucho */
+  }
+
+  .imagen-amairani {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    width: 90%;
+    height: auto;
+    position: relative; /* La imagen estará encima del contenedor, permitiendo moverla */
+    top: -130px; /* Ajusta este valor para mover la imagen hacia abajo o hacia arriba según lo desees */
+    z-index: 0; /* La imagen está debajo del texto */
+  }
+
+  .banderines-izquierda,
+  .banderines-derecha {
+    width: 150px; /* Reduce el tamaño de los banderines */
+    top: 8px; /* Ajusta la posición superior para que no se sobreponga */
+    transform: rotate(0deg) translateX(50%); /* Centra los banderines sin que se salgan */
+    animation-duration: 2s; /* Ajusta la duración de la animación */
+  }
+
+  .banderines-izquierda {
+    left: -50px; /* Ajusta la posición izquierda */
+  }
+
+  .banderines-derecha {
+    right: -50px; /* Ajusta la posición derecha */
+  }
+
+  /* Animaciones de ondeo */
+  @keyframes ondeo {
+    0% {
+      transform: rotate(-45deg) translateY(0px);
+    }
+    50% {
+      transform: rotate(-43deg) translateY(15px);
+    }
+    100% {
+      transform: rotate(-45deg) translateY(0px);
+    }
+  }
+
+  @keyframes ondeo-derecha {
+    0% {
+      transform: rotate(45deg) translateY(0px);
+    }
+    50% {
+      transform: rotate(43deg) translateY(15px);
+    }
+    100% {
+      transform: rotate(45deg) translateY(0px);
+    }
+  }
 }
-
-.imagen-amairani {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  width: 90%;
-  height: auto;
-  position: relative; /* La imagen estará encima del contenedor, permitiendo moverla */
-  top: -130px; /* Ajusta este valor para mover la imagen hacia abajo o hacia arriba según lo desees */
-  z-index: 0; /* La imagen está debajo del texto */
-}
-
-
-
-.banderines-izquierda, .banderines-derecha {
-  width: 150px;               /* Reduce el tamaño de los banderines */
-  top: 8px;                  /* Ajusta la posición superior para que no se sobreponga */
-  transform: rotate(0deg) translateX(50%);  /* Centra los banderines sin que se salgan */
-  animation-duration: 2s;     /* Ajusta la duración de la animación */
-}
-
-.banderines-izquierda {
-  left: -50px;                /* Ajusta la posición izquierda */
-}
-
-.banderines-derecha {
-  right: -50px;               /* Ajusta la posición derecha */
-}
-
-/* Animaciones de ondeo */
-@keyframes ondeo {
-  0% { transform: rotate(-45deg) translateY(0px); }
-  50% { transform: rotate(-43deg) translateY(15px); }
-  100% { transform: rotate(-45deg) translateY(0px); }
-}
-
-@keyframes ondeo-derecha {
-  0% { transform: rotate(45deg) translateY(0px); }
-  50% { transform: rotate(43deg) translateY(15px); }
-  100% { transform: rotate(45deg) translateY(0px); }
-}
-
-
-}
-
-
 
 /*Div reproductor*/
 .contenedor-reproductor {
@@ -322,7 +331,7 @@ body::before {
 
 /* Estilos del reproductor (sin cambios) */
 .reproductor {
-  background-color: #F7C6D7;
+  background-color: #f7c6d7;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -335,14 +344,14 @@ body::before {
 .reproductor h1 {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #FF4081;
-  font-family: 'Chewy', cursive;
+  color: #ff4081;
+  font-family: "Chewy", cursive;
   margin-bottom: 15px;
 }
 
 .boton-reproducir {
-  font-family: 'Chewy', cursive;
-  background-color: #FF4081;
+  font-family: "Chewy", cursive;
+  background-color: #ff4081;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -353,7 +362,7 @@ body::before {
 }
 
 .boton-reproducir:hover {
-  background-color: #F50057;
+  background-color: #f50057;
 }
 
 .audio-player {
@@ -364,7 +373,7 @@ input[type="range"] {
   width: 100%;
   -webkit-appearance: none;
   appearance: none;
-  background: #FF4081;
+  background: #ff4081;
   height: 8px;
   border-radius: 5px;
   outline: none;
@@ -375,26 +384,27 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.control-volumen, p {
+.control-volumen,
+p {
   margin-top: 10px;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   color: #000000;
 }
 
 .icono {
   font-size: 2rem;
-  color: #FF4081;
+  color: #ff4081;
   cursor: pointer;
 }
 
 /* Estilos para el botón "Siguiente" */
 .boton-siguiente {
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   background-color: #07bb52;
   color: #fff;
   border: none;
@@ -412,46 +422,45 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Medias para el reproductor */
 @media (max-width: 480px) {
-
   .contenedor-reproductor {
     display: grid;
     place-items: center; /* Centra horizontal y verticalmente */
-    padding: 10px;        /* Agrega un poco de espacio alrededor para evitar que el reproductor toque los bordes */
-    overflow: hidden;     /* Evita que los elementos se desborden */
+    padding: 10px; /* Agrega un poco de espacio alrededor para evitar que el reproductor toque los bordes */
+    overflow: hidden; /* Evita que los elementos se desborden */
     margin-top: -38rem;
   }
 
   .reproductor {
-    background-color: #F7C6D7;
-    padding: 15px;                /* Reduce el padding para que no ocupe tanto espacio */
+    background-color: #f7c6d7;
+    padding: 15px; /* Reduce el padding para que no ocupe tanto espacio */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;                  /* Asegura que el reproductor ocupe todo el espacio disponible */           /* Limita el ancho máximo */
-    box-sizing: border-box;      /* Asegura que el padding se incluya en el ancho */
+    width: 80%; /* Asegura que el reproductor ocupe todo el espacio disponible */ /* Limita el ancho máximo */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
     position: relative;
     top: 5rem;
   }
 
   .reproductor h1 {
-    font-size: 1.3rem;          /* Reduce el tamaño de la fuente para pantallas más pequeñas */
+    font-size: 1.3rem; /* Reduce el tamaño de la fuente para pantallas más pequeñas */
     font-weight: bold;
-    color: #FF4081;
-    font-family: 'Chewy', cursive;
-    margin-bottom: 10px;        /* Ajusta el margen inferior para que no se vea demasiado separado */
+    color: #ff4081;
+    font-family: "Chewy", cursive;
+    margin-bottom: 10px; /* Ajusta el margen inferior para que no se vea demasiado separado */
   }
 
   .boton-reproducir {
-    font-family: 'Chewy', cursive;
-    background-color: #FF4081;
+    font-family: "Chewy", cursive;
+    background-color: #ff4081;
     border: none;
-    padding: 8px 16px;          /* Reducido el tamaño del padding para que el botón no ocupe tanto espacio */
-    font-size: 1rem;            /* Reducido el tamaño de la fuente */
-    border-radius: 20px;        /* Ajustado el radio de bordes */
+    padding: 8px 16px; /* Reducido el tamaño del padding para que el botón no ocupe tanto espacio */
+    font-size: 1rem; /* Reducido el tamaño de la fuente */
+    border-radius: 20px; /* Ajustado el radio de bordes */
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 90%;                /* Asegura que el botón ocupe el 100% del contenedor */       /* Limita el ancho máximo para evitar que se haga demasiado grande */
-    margin: 10px 0;             /* Agrega margen vertical para separar los botones */
+    width: 90%; /* Asegura que el botón ocupe el 100% del contenedor */ /* Limita el ancho máximo para evitar que se haga demasiado grande */
+    margin: 10px 0; /* Agrega margen vertical para separar los botones */
   }
 
   .audio-player {
@@ -467,7 +476,8 @@ input[type="range"]::-webkit-slider-thumb {
     height: 16px; /* Reducir el tamaño del thumb */
   }
 
-  .control-volumen, p {
+  .control-volumen,
+  p {
     margin-top: 8px; /* Reducir el margen superior en pantallas pequeñas */
     font-size: 1rem; /* Reducir el tamaño de la fuente para ajustarse mejor */
   }
@@ -477,25 +487,24 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .boton-siguiente {
-    font-family: 'Chewy';
+    font-family: "Chewy";
     font-size: 1rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
     padding: 8px 16px; /* Ajustar el padding para que se vea mejor */
     margin-top: 8px; /* Reducir el margen superior */
-    width: 90%;           /* Asegura que el botón ocupe el 100% del contenedor */
+    width: 90%; /* Asegura que el botón ocupe el 100% del contenedor */
   }
 
   .control-volumen {
-    font-family: 'Chewy';
+    font-family: "Chewy";
   }
 }
-
 
 /*contador*/
 #contador {
   color: #ffeb33;
   font-weight: bold;
   font-size: 3.5rem;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
 }
 
 .contador-container {
@@ -507,20 +516,19 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 2rem;
   padding: 10px;
   border-radius: 25px;
-  background-color: #EB57A2;
+  background-color: #eb57a2;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   width: 70%;
 }
 
 /* Resto del estilo del contador (sin cambios) */
 .titulo {
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   font-size: 2rem;
   color: #f1ee05e3;
   font-weight: lighter;
   text-align: center;
   text-shadow: 2px 2px 0 #0000006c;
-
 }
 
 .contador {
@@ -532,18 +540,18 @@ input[type="range"]::-webkit-slider-thumb {
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
 }
 
 .tiempo {
   display: flex;
   flex-direction: column;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   padding: 15px 140px; /*Largo y ancho del contenedor del los, dias, horas, minutos y segundos*/
-  background: linear-gradient(135deg, #F4CF48, #F5B671);
+  background: linear-gradient(135deg, #f4cf48, #f5b671);
   border-radius: 10px;
   font-size: 45px;
-  color: #605DA0;
+  color: #605da0;
   max-width: 75px;
   flex-grow: 1;
   font-weight: bold;
@@ -568,15 +576,14 @@ input[type="range"]::-webkit-slider-thumb {
   text-align: center; /* Asegura que el texto dentro de cada sección se centre */
 }
 
-
-
 /* Animación de rebote */
 @keyframes bounce {
-  0%, 100% {
-      transform: translateY(0);
+  0%,
+  100% {
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
 
@@ -584,27 +591,24 @@ input[type="range"]::-webkit-slider-thumb {
   animation: bounce 2s infinite;
 }
 
-
 /*Medias Contador*/
 
 @media (max-width: 480px) {
-
   #contador {
     color: #ffeb33;
     font-weight: bold;
     font-size: 2.5rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   .titulo {
-    font-family: 'Chewy', cursive;
-
+    font-family: "Chewy", cursive;
   }
 
   .contador-container {
-    width: 100%;         /* Aumenta el ancho en pantallas pequeñas */
-    max-width: none;    /* Elimina el límite de ancho máximo */
-    padding: 8px;       /* Reduce el padding para un mejor ajuste */
+    width: 100%; /* Aumenta el ancho en pantallas pequeñas */
+    max-width: none; /* Elimina el límite de ancho máximo */
+    padding: 8px; /* Reduce el padding para un mejor ajuste */
     position: relative; /* permite moverlo con top*/
     top: -13rem;
     margin-bottom: -10rem;
@@ -612,44 +616,39 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .contador {
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
     font-weight: bold;
-    font-size: 30px;     /* Reduce el tamaño de la fuente */
+    font-size: 30px; /* Reduce el tamaño de la fuente */
     margin-bottom: 10px; /* Reduce el margen inferior */
-
-
   }
 
   .tiempo {
-    padding: 10px 10px;   /* Reduce el padding */
-    font-size: 25px;      /* Reduce el tamaño de la fuente */
-    max-width: 75px;      /* Limita el tamaño máximo */
-    font-family: 'Chewy', cursive;
-
+    padding: 10px 10px; /* Reduce el padding */
+    font-size: 25px; /* Reduce el tamaño de la fuente */
+    max-width: 75px; /* Limita el tamaño máximo */
+    font-family: "Chewy", cursive;
   }
 
   .tiempo span {
     font-size: 16px; /* Reduce el tamaño del texto en las secciones */
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
     font-weight: bold;
   }
 
   .tiempo-seccion {
-    margin: 0 10px;  /* Reduce el margen entre secciones */
+    margin: 0 10px; /* Reduce el margen entre secciones */
   }
 }
-
-
 
 /*Seccion galeria*/
 
 #galeria {
   padding: 2rem;
-  background-size: auto; 
+  background-size: auto;
 }
 
 .titulo-galeria {
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   font-size: 4rem;
   color: #ff014d;
   text-align: center;
@@ -672,46 +671,42 @@ input[type="range"]::-webkit-slider-thumb {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.contenedor-galeria img:hover{
-  transform:scale(1.05);
+.contenedor-galeria img:hover {
+  transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-
- /* Estilo para el contenedor */
- .contenedor {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    height: 0rem; /* Para centrar la animación en la pantalla */
-    background-color: transparent; /* Fondo gris claro */
-    margin-left: 32rem;
- }
+/* Estilo para el contenedor */
+.contenedor {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 0rem; /* Para centrar la animación en la pantalla */
+  background-color: transparent; /* Fondo gris claro */
+  margin-left: 32rem;
+}
 
 .contenedor-galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.80rem;
-    padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+  padding: 0 1rem;
 }
 
 .contenedor-galeria img {
   display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.contenedor-galeria img:hover{
-    transform:scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+.contenedor-galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 /* Modal: Oculto por defecto */
 .modal {
@@ -735,70 +730,106 @@ input[type="range"]::-webkit-slider-thumb {
   transform: scale(1.5);
   pointer-events: none; /* Evita interacción cuando está oculto */
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
-  }
-
-  /* Cuando el modal está activo */
+/* Cuando el modal está activo */
 .modal.show {
   opacity: 1;
   transform: scale(1);
   pointer-events: auto; /* Permite interacción cuando está visible */
 }
-  
-  /* Imagen dentro del modal */
-  .contenedor-modal {
-    max-width: 90%; /* Máximo 90% del ancho de la ventana */
-    max-height: 80%; /* Máximo 80% del alto de la ventana */
-    margin: auto;
-    display: block;
-    border-radius: 10px; /* Esquinas redondeadas opcionales */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para un efecto elegante */
-    object-fit: contain;
-  }
-  
-  /* Botón para cerrar el modal */
-  .close {
-    margin-top: 80px; /* Espaciado entre la imagen y el botón */
-    margin: 80px auto;
-    color: black;
-    font-size: 60px; /* Tamaño del texto */
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1100;
-    width: 70px; /* Tamaño del botón circular */
-    height: 70px;
-    background-color: rgba(255, 255, 255, 0.527); /* Fondo semitransparente */
-    border-radius: 50%; /* Hacerlo circular */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    align-self: center; /* Centrar el botón horizontalmente */
-  }
-  
-  .close:hover {
-    background-color: rgba(255, 230, 0, 0.644); /* Cambiar el fondo al pasar el mouse */
-    color: rgba(0, 0, 0, 0.815); /* Cambia el color de la 'X' */
-    transform: scale(1.5); /* Agranda ligeramente el botón al pasar el mouse */
-  }
 
+/* Imagen dentro del modal */
+.contenedor-modal {
+  max-width: 90%; /* Máximo 90% del ancho de la ventana */
+  max-height: 80%; /* Máximo 80% del alto de la ventana */
+  margin: auto;
+  display: block;
+  border-radius: 10px; /* Esquinas redondeadas opcionales */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para un efecto elegante */
+  object-fit: contain;
+}
+
+/*Estilo para los botones de la galeria*/
+.modal .prev,
+.modal .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.modal .prev {
+  left: 2rem;
+}
+
+.modal .next {
+  right: 2rem;
+}
+
+.modal .prev:hover,
+.modal .next:hover {
+  transform: translateY(-50%) scale(1.2);
+  color: #ffea00;
+}
+
+/* Botón para cerrar el modal */
+.close {
+  margin-top: 80px; /* Espaciado entre la imagen y el botón */
+  margin: 80px auto;
+  color: black;
+  font-size: 60px; /* Tamaño del texto */
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1100;
+  width: 70px; /* Tamaño del botón circular */
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.527); /* Fondo semitransparente */
+  border-radius: 50%; /* Hacerlo circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  align-self: center; /* Centrar el botón horizontalmente */
+}
+
+.close:hover {
+  background-color: rgba(
+    255,
+    230,
+    0,
+    0.644
+  ); /* Cambiar el fondo al pasar el mouse */
+  color: rgba(0, 0, 0, 0.815); /* Cambia el color de la 'X' */
+  transform: scale(1.5); /* Agranda ligeramente el botón al pasar el mouse */
+}
 
 /* Media Query para Galeria */
 @media (max-width: 480px) {
   /* Ajustes para el título de la galería */
   .titulo-galeria {
-  font-family: 'Chewy', cursive;
-  font-size: 2.5rem;
-  font-weight: lighter;
-  color: #ff014d;
-  text-align: center;
-  text-shadow: 2px 2px 0 #0000006c;
-  margin: 3rem 1rem;
+    font-family: "Chewy", cursive;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: #ff014d;
+    text-align: center;
+    text-shadow: 2px 2px 0 #0000006c;
+    margin: 3rem 1rem;
   }
 
   /* Cambiar la disposición de las imágenes en la galería */
   .contenedor-galeria {
-    grid-template-columns: repeat(2, 1fr); /* Tres columnas en pantallas pequeñas */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Tres columnas en pantallas pequeñas */
     gap: 0.5rem; /* Reduce el espacio entre imágenes */
   }
 
@@ -807,6 +838,43 @@ input[type="range"]::-webkit-slider-thumb {
     width: 100%;
     height: auto;
     border-radius: 8px; /* Esquinas menos redondeadas */
+  }
+
+  /*Estilo para los botones de la galeria*/
+  .modal .prev,
+  .modal .next {
+    position: absolute;
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%) translateY(-50%);
+    background: #ff0180;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 22px;
+    height: 40px;
+    font-size: 1.5rem;
+    padding: 0;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .modal .next {
+    top: 60%; /* Más arriba */
+  }
+
+  .modal .prev {
+    top: 67%; /* Más abajo */
+  }
+
+  .modal .prev:hover,
+  .modal .next:hover {
+    background: #ffa600;
+    transform: translateX(-50%) translateY(-50%) scale(1.1);
   }
 
   /* Ajustes en el modal */
@@ -828,25 +896,23 @@ input[type="range"]::-webkit-slider-thumb {
 
 /*Seccion de los padrinos*/
 .titulo-padrinos {
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   font-size: 2.5rem;
   color: #ff014d;
   text-align: center;
   text-shadow: 2px 2px 0 #0000006c;
   margin: 3rem 1rem;
-
 }
 
 .nombres-padrinos {
-    text-align: center;
-    font-family: 'Chewy', sans-serif !important;
-    font-size: 1.8rem;
-    color: #000000 !important;
-    margin: 0 auto;
-    max-width: 80%;
-    line-height: 1.4;
+  text-align: center;
+  font-family: "Chewy", sans-serif !important;
+  font-size: 1.8rem;
+  color: #000000 !important;
+  margin: 0 auto;
+  max-width: 80%;
+  line-height: 1.4;
 }
-
 
 /* Sección Detalles de la Fiesta Infantil */
 #fiesta-infantil {
@@ -855,7 +921,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .texto-reventar {
-  font-family: 'Chewy' cursive;
+  font-family: "Chewy" cursive;
   padding: 1.5rem 1.5rem;
   font-size: 2.5rem;
   font-weight: bold;
@@ -882,8 +948,13 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Animación de flotado */
 @keyframes flotar {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 /* Efecto de explosión */
@@ -892,11 +963,19 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 @keyframes explotar {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.8; }
-  100% { transform: scale(0); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
 }
-
 
 /* Dirección (oculta al inicio) */
 .direccion-fiestas {
@@ -912,7 +991,6 @@ input[type="range"]::-webkit-slider-thumb {
   transition: opacity 1s ease-in-out;
 }
 
-
 /*Media querys fiesta infantil*/
 @media (max-width: 480px) {
   /* Sección Detalles de la Fiesta Infantil */
@@ -923,7 +1001,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   /* Texto principal */
   .texto-reventar {
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
     padding: 1rem 1rem; /* Reducimos el padding para ajustarse a pantallas pequeñas */
     font-size: 2rem; /* Reducimos el tamaño de la fuente */
     color: #fff;
@@ -945,8 +1023,13 @@ input[type="range"]::-webkit-slider-thumb {
 
   /* Animación de flotado */
   @keyframes flotar {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); } /* Reducimos el movimiento de flotado */
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    } /* Reducimos el movimiento de flotado */
   }
 
   /* Efecto de explosión */
@@ -955,9 +1038,18 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   @keyframes explotar {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.8; } /* Reducimos la escala de la explosión */
-    100% { transform: scale(0); opacity: 0; }
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    } /* Reducimos la escala de la explosión */
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
   }
 
   /* Dirección (visible en pantallas pequeñas) */
@@ -975,8 +1067,6 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
-
-
 /* Sección de direcciones */
 #event-locations {
   text-align: center;
@@ -986,7 +1076,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Título */
 .titulo-celebracion {
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   font-size: 4rem;
   color: #ff014d;
   text-align: center;
@@ -998,7 +1088,7 @@ input[type="range"]::-webkit-slider-thumb {
 .event-locations p {
   font-size: 2rem;
   color: black;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   margin-bottom: 2rem;
 }
 
@@ -1033,7 +1123,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* Parte delantera y trasera */
-.location-front, .location-back {
+.location-front,
+.location-back {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1057,8 +1148,8 @@ input[type="range"]::-webkit-slider-thumb {
 /* Parte trasera */
 .location-back {
   transform: rotateY(180deg);
-  background: linear-gradient(135deg,#ffffff, #ffe3d0);
-  font-family: 'Lora', serif;
+  background: linear-gradient(135deg, #ffffff, #ffe3d0);
+  font-family: "Lora", serif;
   padding: 1rem;
   font-size: 1.3rem;
 }
@@ -1076,26 +1167,25 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 1.3rem;
   color: rgb(0, 99, 248);
   font-weight: bold;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 
 /* Estilo personalizado para el botón */
 .custom-button {
-  background-color: #12bddb;  /* Color de fondo */
-  color: white;  /* Color del texto */
-  padding: 10px 20px;  /* Espaciado interno (alto y ancho) */
-  font-size: 1rem;  /* Tamaño de fuente */
-  font-weight: bold;  /* Negrita */
-  border-radius: 5px;  /* Bordes redondeados */
-  border: none;  /* Sin borde */
-  cursor: pointer;  /* Cambiar el cursor a puntero cuando pase sobre el botón */
-  transition: background-color 0.3s;  /* Efecto de transición para el color */
+  background-color: #12bddb; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno (alto y ancho) */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  border-radius: 5px; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambiar el cursor a puntero cuando pase sobre el botón */
+  transition: background-color 0.3s; /* Efecto de transición para el color */
 }
 
 .custom-button:hover {
-  background-color: #b64900;  /* Color cuando el botón se pasa el mouse */
+  background-color: #b64900; /* Color cuando el botón se pasa el mouse */
 }
-
 
 /* Media Query para pantallas de 480px o menos */
 @media (max-width: 480px) {
@@ -1105,28 +1195,27 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   /* Título */
-.titulo-celebracion {
-  font-family: 'Chewy', cursive;
-  font-size: 2.5rem;
-  color: #ff014d;
-  text-align: center;
-  text-shadow: 2px 2px 0 #0000006c;
-  margin: 3rem 1rem;
-}
+  .titulo-celebracion {
+    font-family: "Chewy", cursive;
+    font-size: 2.5rem;
+    color: #ff014d;
+    text-align: center;
+    text-shadow: 2px 2px 0 #0000006c;
+    margin: 3rem 1rem;
+  }
 
   /* Descripción */
   .event-locations p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    font-family: 'Chewy', cursive;
-
+    font-family: "Chewy", cursive;
   }
 
   /* Galería de tarjetas centrada */
   .location-gallery {
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Centra las cards horizontalmente */
+    align-items: center; /* Centra las cards horizontalmente */
     gap: 1rem;
   }
 
@@ -1134,12 +1223,12 @@ input[type="range"]::-webkit-slider-thumb {
   .location-card {
     width: 180px;
     height: 240px;
-    max-width: 100%;  /* Evita que se desborde */
+    max-width: 100%; /* Evita que se desborde */
     margin: 0 auto; /* Centra las cards */
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Alinea el contenido en el centro verticalmente */
-    align-items: center;  /* Centra los elementos horizontalmente */
+    justify-content: center; /* Alinea el contenido en el centro verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
   }
 
   /* Parte trasera */
@@ -1148,9 +1237,9 @@ input[type="range"]::-webkit-slider-thumb {
     padding: 0.8rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Centra los elementos dentro */
-    align-items: center;      /* Centra los elementos dentro */
-    text-align: center;       /* Centra el texto */
+    justify-content: center; /* Centra los elementos dentro */
+    align-items: center; /* Centra los elementos dentro */
+    text-align: center; /* Centra el texto */
     width: 100%;
   }
 
@@ -1167,16 +1256,16 @@ input[type="range"]::-webkit-slider-thumb {
 
   /* Asegura que el <a> y el <button> no se desborden */
   .location-back a {
-    display: flex;  /* Usamos flexbox aquí para centrar el contenido */
-    justify-content: center;  /* Centra el contenido horizontalmente */
-    width: 100%;  /* Ocupa el 100% del contenedor */
+    display: flex; /* Usamos flexbox aquí para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 100%; /* Ocupa el 100% del contenedor */
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
   }
 
   /* Ajuste del botón para que ocupe el 80% del contenedor, sin desbordarse */
   .location-back .button.is-primary {
     width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
-    max-width: 200px;  /* Limita el tamaño máximo para evitar que se estire demasiado */
+    max-width: 200px; /* Limita el tamaño máximo para evitar que se estire demasiado */
     padding: 12px 20px; /* Ajusta el padding del botón */
     font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
     text-align: center; /* Centra el texto dentro del botón */
@@ -1184,10 +1273,6 @@ input[type="range"]::-webkit-slider-thumb {
     box-sizing: border-box; /* Asegura que padding y bordes estén dentro del ancho */
   }
 }
-
-
-
-
 
 /* Estilo general para la sección seleccionar fotos */
 .contenedor-subir-fotos {
@@ -1199,12 +1284,12 @@ input[type="range"]::-webkit-slider-thumb {
 /* Título principal */
 .title-upload-photos {
   text-align: center;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   font-weight: bold;
   font-size: 3.5rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
-  color: #FFF;
+  color: #fff;
 }
 
 /* Texto descriptivo */
@@ -1215,21 +1300,21 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 2.3rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
-  color: #FFF;
+  color: #fff;
 }
 
 .frase-texto {
   margin-top: auto;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
 }
 
 .texto-info {
   padding-top: 3rem;
   font-size: 1.3rem;
-  font-family: 'sans-serif';
+  font-family: "sans-serif";
   font-weight: lighter;
-  color: #FFF;
-  font-family: 'Chewy', cursive;
+  color: #fff;
+  font-family: "Chewy", cursive;
 }
 
 /* Contenedor del formulario */
@@ -1259,9 +1344,10 @@ form input[type="file"] {
 }
 
 /* Etiqueta personalizada y botón con fondo visible */
-label, button {
+label,
+button {
   display: inline-block;
-  background-color: #00b7ff;  /* Fondo visible desde el inicio */
+  background-color: #00b7ff; /* Fondo visible desde el inicio */
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
@@ -1269,18 +1355,20 @@ label, button {
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  min-width: 220px;  /* Mantener el mismo tamaño para ambos botones */
+  min-width: 220px; /* Mantener el mismo tamaño para ambos botones */
   text-align: center;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
 }
 
 /* Hover y efectos */
-label:hover, button:hover {
+label:hover,
+button:hover {
   background-color: #ff235a;
   transform: translateY(-2px);
 }
 
-label:active, button:active {
+label:active,
+button:active {
   transform: translateY(0);
 }
 
@@ -1290,10 +1378,10 @@ button {
 
 .upload-button {
   background-color: #07bb52;
-  color: #FFF;
+  color: #fff;
   margin-top: 2rem;
   padding: 12px 20px;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
 }
 
 .upload-button:hover {
@@ -1307,10 +1395,10 @@ button {
   padding: 10px;
   border-radius: 6px;
   color: #fff;
-  display: none;  /* Oculto por defecto */
+  display: none; /* Oculto por defecto */
   max-width: 80%;
   text-align: center;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
 }
 
 #fileList {
@@ -1325,8 +1413,7 @@ button {
   padding: 5px;
   border-radius: 10px;
   margin: 5px 0;
-  font-family: 'Chewy', cursive;
-
+  font-family: "Chewy", cursive;
 }
 
 /* Animación sutil para la sección */
@@ -1335,21 +1422,28 @@ button {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .pastel-plimplim {
   width: 130px;
   height: 130px;
   margin-top: 20px;
-  align-self:flex-start;
+  align-self: flex-start;
 
   animation: flotar 3s infinite ease-in-out;
 }
 
 @keyframes flotar {
-  0%, 100% {
+  0%,
+  100% {
     transform: scaleX(-1) translateY(0);
   }
   50% {
@@ -1371,7 +1465,8 @@ button {
 }
 
 @keyframes balanceo {
-  0%, 100% {
+  0%,
+  100% {
     transform: scaleX(-1) rotate(0deg);
   }
   25% {
@@ -1382,27 +1477,30 @@ button {
   }
 }
 
-
-
-
 /* HTML: <div class="loader"></div> */
 .loader {
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
   background: #514b82;
-  -webkit-mask: radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+  -webkit-mask: radial-gradient(
+    circle closest-side at 50% 40%,
+    #0000 94%,
+    #000
+  );
   transform-origin: 50% 40%;
   animation: l25 1s infinite linear;
 }
 @keyframes l25 {
-  100% {transform: rotate(1turn)}
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 #statusMessage {
   margin-top: 2rem;
   text-align: center;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   font-size: 1.5rem;
   font-weight: bold;
   width: 100%;
@@ -1423,7 +1521,7 @@ button {
 
 #fileList {
   margin-top: 1rem;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   font-size: 1.2rem;
   color: #333;
 }
@@ -1432,13 +1530,9 @@ button {
   margin: 0.5rem 0;
 }
 
-
-
-
 /*Media querys para subir fotos*/
 /* Media Query para pantallas de 480px o menos */
 @media (max-width: 480px) {
-
   /* Sección contenedor-subir-fotos */
   .contenedor-subir-fotos {
     margin-top: 5rem;
@@ -1447,7 +1541,7 @@ button {
 
   /* Título principal */
   .title-upload-photos {
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
     font-size: 2.5rem;
     padding-top: 7rem;
     padding-bottom: 0.5rem;
@@ -1457,18 +1551,18 @@ button {
   .texto-subir-fotos {
     font-size: 1.8rem;
     margin-top: 2rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   .frase-texto {
     font-size: 1.5rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   .texto-info {
     padding-top: 2rem;
     font-size: 1.1rem;
-    font-family: 'Chewy';
+    font-family: "Chewy";
   }
 
   /* Contenedor del formulario */
@@ -1484,11 +1578,12 @@ button {
   }
 
   /* Etiqueta personalizada y botón */
-  label, button {
+  label,
+  button {
     font-size: 14px;
     padding: 10px 15px;
     min-width: 180px;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   button {
@@ -1498,7 +1593,7 @@ button {
   .upload-button {
     padding: 10px 15px;
     margin-top: 1.5rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   /* Mensaje de estado: Archivo subido exitosamente */
@@ -1506,19 +1601,19 @@ button {
     color: #000;
     font-size: 1.5rem;
     padding: 0.5rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   #fileList {
     margin-top: 0.5rem;
     font-size: 1rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   #fileList p {
     padding: 4px;
     font-size: 1rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   /* Ajustes para imágenes y animaciones */
@@ -1538,23 +1633,19 @@ button {
   /* Loader */
   .loader {
     width: 80px;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   /* Contenedor del loader */
   .status-container {
     padding: 1rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   .subiendo-archivos {
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 }
-
-
-
-
 
 #confirmar-asistencia {
   position: relative;
@@ -1575,7 +1666,7 @@ button {
 
 /* Título */
 .titulo-confirmacion {
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   font-size: 2.5rem;
   color: #2b2b2b; /* Color más oscuro para mejor lectura */
   margin-bottom: 1.2rem;
@@ -1583,7 +1674,7 @@ button {
 
 /* Texto de confirmación */
 .texto-confirmacion {
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
   font-size: 1.1rem;
   color: #444; /* Un poco más oscuro */
   margin-bottom: 2rem;
@@ -1595,12 +1686,12 @@ button {
   padding: 12px 25px;
   font-size: 18px;
   color: white;
-  background-color: #25D366; /* Verde WhatsApp */
+  background-color: #25d366; /* Verde WhatsApp */
   text-decoration: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  font-family: 'Chewy', cursive;
+  font-family: "Chewy", cursive;
 }
 
 /* Efecto hover */
@@ -1630,8 +1721,6 @@ button {
   margin-top: 20px;
 }
 
-
-
 /* Media query para Confirmacion de asistencia */
 @media (max-width: 480px) {
   #confirmar-asistencia {
@@ -1652,7 +1741,7 @@ button {
     margin-top: 1.5rem;
     font-size: 1.8rem;
     padding-bottom: 1rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   .texto-confirmacion {
@@ -1660,9 +1749,8 @@ button {
     font-size: 1rem;
     padding: 0.5rem;
     padding-bottom: 5px;
-    font-family: 'Chewy';
+    font-family: "Chewy";
     font-weight: bold;
-
   }
 
   .boton-confirmar {
@@ -1670,7 +1758,7 @@ button {
     padding: 10px 15px;
     border-radius: 20px;
     margin-top: 0.5rem;
-    font-family: 'Chewy', cursive;
+    font-family: "Chewy", cursive;
   }
 
   .plimplim-esquina {
@@ -1688,4 +1776,3 @@ button {
     margin-top: 1rem;
   }
 }
-

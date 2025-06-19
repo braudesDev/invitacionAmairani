@@ -1,309 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!--Favicon-->
-    <link rel="icon" href="https://res.cloudinary.com/drsyb53ae/image/upload/v1741061182/recursos%20amairani%20images/ugpbbnhelpjspds4ve2x.png" type="image/png">
-
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/drsyb53ae/image/upload/v1741061182/recursos%20amairani%20images/ugpbbnhelpjspds4ve2x.png"
+      type="image/png"
+    />
 
     <!-- Declara el tipo de documento como HTML5 -->
-    <meta charset="UTF-8">
-    
+    <meta charset="UTF-8" />
+
     <!-- Configura la ventana gráfica para que el sitio sea responsivo -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Invitación Amairani</title>
-    
+
     <!-- Metadatos Open Graph para miniatura cuando se comparte en redes sociales -->
-    <meta property="og:title" content="Invitación Amairani">
+    <meta property="og:title" content="Invitación Amairani" />
     <!-- Título que se mostrará en la vista previa cuando se comparta el link -->
 
-    <meta property="og:description" content="¡Estás invitado al cumpleaños de AMAIRANI! Haz clic para más detalles.">
+    <meta
+      property="og:description"
+      content="¡Estás invitado al cumpleaños de AMAIRANI! Haz clic para más detalles."
+    />
     <!-- Descripción que se mostrará en la vista previa -->
 
-    <meta property="og:image" content="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983355/amairaniLogo1_v3yzul.png">
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983355/amairaniLogo1_v3yzul.png"
+    />
     <!-- URL de la imagen que aparecerá como miniatura en la vista previa -->
-    
-    <meta property="og:url" content="https://invitacionamairani.onrender.com/">
+
+    <meta
+      property="og:url"
+      content="https://invitacionamairani.onrender.com/"
+    />
     <!-- URL de la página a la que dirigirá el link compartido -->
 
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="website" />
     <!-- Tipo de contenido (en este caso, sitio web) -->
 
     <!-- Metadatos para Twitter para mejorar la apariencia cuando se comparte el link -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary_large_image" />
     <!-- Define el tipo de tarjeta, 'summary_large_image' muestra una miniatura grande -->
-    
-    <meta name="twitter:title" content="Invitación Amairani">
+
+    <meta name="twitter:title" content="Invitación Amairani" />
     <!-- Título que aparecerá en la tarjeta de Twitter -->
 
-    <meta name="twitter:description" content="¡Estás invitado al cumpleaños de AMAIRANI!">
+    <meta
+      name="twitter:description"
+      content="¡Estás invitado al cumpleaños de AMAIRANI!"
+    />
     <!-- Descripción que aparecerá en la tarjeta de Twitter -->
 
-    <meta name="twitter:image" content="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983355/amairaniLogo1_v3yzul.png">
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983355/amairaniLogo1_v3yzul.png"
+    />
     <!-- URL de la imagen que se mostrará en la tarjeta de Twitter -->
 
     <!-- Enlace a la hoja de estilos CSS personalizada -->
-    <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="styles.css" />
+
     <!-- Optimiza la carga de fuentes de Google conectando previamente -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- Importa las fuentes 'Dancing Script' y 'Satisfy' desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Satisfy&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Enlace a la biblioteca AOS (Animate On Scroll) para efectos de animación al desplazarse -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
     <!-- Enlace a Bulma, un framework CSS para diseño responsivo y elegante -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+
     <!-- Importa la fuente 'Chewy' desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- API de Google para posibles integraciones (no hay llamada específica en el código) -->
     <script src="https://apis.google.com/js/api.js"></script>
-    
+
     <!-- Lottie Player para animaciones basadas en archivos Lottie (.json) -->
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-</head>
-<body>
-
-
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </head>
+  <body>
     <section id="principal">
-        <div class="confeti"></div>
-        <div class="confeti"></div>
-        <div class="confeti"></div>
-        <!-- Agregar más divs para más confeti -->
-        <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983351/abejitaDerecha_jzzsl6.png" alt="Abejita chiquitita con canasta" class="abejita-animacion"> <!--Imagen de abejita-->
+      <div class="confeti"></div>
+      <div class="confeti"></div>
+      <div class="confeti"></div>
+      <!-- Agregar más divs para más confeti -->
+      <img
+        src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983351/abejitaDerecha_jzzsl6.png"
+        alt="Abejita chiquitita con canasta"
+        class="abejita-animacion"
+      />
+      <!--Imagen de abejita-->
 
+      <div class="contenedor-invitacion">
+        <!-- <h2 class="texto-primer-anio">Mi primer año</h2> -->
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983352/feliz_cumpleanios_dgeia4.png"
+          alt="Feliz cumple"
+          class="imagen-feliz-cumple"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983354/amairaniAbejita_uodgwk.png"
+          alt="Logo Amairani"
+          class="imagen-amairani"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983350/banderines_kmhskv.svg"
+          alt="Banderines"
+          class="banderines-izquierda"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983350/banderines_kmhskv.svg"
+          alt="Banderines"
+          class="banderines-derecha"
+        />
+      </div>
 
-        <div class="contenedor-invitacion">
-            <!-- <h2 class="texto-primer-anio">Mi primer año</h2> -->
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983352/feliz_cumpleanios_dgeia4.png" alt="Feliz cumple" class="imagen-feliz-cumple">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983354/amairaniAbejita_uodgwk.png" alt="Logo Amairani" class="imagen-amairani">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983350/banderines_kmhskv.svg" alt="Banderines" class="banderines-izquierda">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983350/banderines_kmhskv.svg" alt="Banderines" class="banderines-derecha">
-            
-            
+      <!-- Contenedor principal para centrar el reproductor -->
+      <div class="contenedor-reproductor">
+        <div class="reproductor">
+          <h1>¡Si quieres puedes escuchar la música que me gusta!</h1>
+
+          <!-- Botón de reproducción -->
+          <button class="boton-reproducir">Reproducir</button>
+
+          <!-- Reproductor de audio -->
+          <audio id="musica" class="audio-player" preload="auto">
+            <source
+              id="audio-source"
+              src="https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/l4otlu6b7n1z2cof50fs.mp3"
+              type="audio/mp3"
+            />
+          </audio>
+
+          <!-- Controles de volumen y progreso -->
+          <div class="control-volumen">
+            <input
+              type="range"
+              id="volumen"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+              onchange="setVolumen(this.value)"
+            />
+            <p class="control-volumen">- Controlar Volumen +</p>
+          </div>
+
+          <!-- Controles de música -->
+          <div>
+            <button class="boton-siguiente">Siguiente</button>
+          </div>
         </div>
-
-
-        <!-- Contenedor principal para centrar el reproductor -->
-        <div class="contenedor-reproductor">
-            <div class="reproductor">
-                <h1>¡Si quieres puedes escuchar la música que me gusta!</h1>
-
-                <!-- Botón de reproducción -->
-                <button class="boton-reproducir">Reproducir</button>
-
-                <!-- Reproductor de audio -->
-                <audio id="musica" class="audio-player" preload="auto">
-                    <source id="audio-source" src="https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/l4otlu6b7n1z2cof50fs.mp3" type="audio/mp3">
-                </audio>
-
-                <!-- Controles de volumen y progreso -->
-                <div class="control-volumen">
-                    <input type="range" id="volumen" min="0" max="1" step="0.01" value="1" onchange="setVolumen(this.value)">
-                    <p class="control-volumen"> - Controlar Volumen + </p>
-                </div>
-
-                <!-- Controles de música -->
-                <div>
-                    <button class="boton-siguiente">Siguiente</button>
-                </div>
-            </div>
-        </div>
-
+      </div>
     </section>
-
 
     <!--Crear contador-->
     <section>
-        <div class="contador-container">
-            <div class="titulo">Cuenta Regresiva para la Fiesta</div>
-            <div class="contador" id="contador">
-                <div class="tiempo-seccion">
-                    <div id="dias" class="tiempo">00 <span>Días</span></div>
-                </div>
-                <div class="tiempo-seccion">
-                    <div id="horas" class="tiempo">00 <span>Horas</span></div>
-                </div>
-                <div class="tiempo-seccion">
-                    <div id="minutos" class="tiempo">00 <span>Minutos</span></div>
-                </div>
-                <div class="tiempo-seccion">
-                    <div id="segundos" class="tiempo">00 <span>Segundos</span></div>
-                </div>
-            </div>
+      <div class="contador-container">
+        <div class="titulo">Cuenta Regresiva para la Fiesta</div>
+        <div class="contador" id="contador">
+          <div class="tiempo-seccion">
+            <div id="dias" class="tiempo">00 <span>Días</span></div>
+          </div>
+          <div class="tiempo-seccion">
+            <div id="horas" class="tiempo">00 <span>Horas</span></div>
+          </div>
+          <div class="tiempo-seccion">
+            <div id="minutos" class="tiempo">00 <span>Minutos</span></div>
+          </div>
+          <div class="tiempo-seccion">
+            <div id="segundos" class="tiempo">00 <span>Segundos</span></div>
+          </div>
         </div>
-    </section>    
-
-
-
+      </div>
+    </section>
 
     <!--Seccion galeria-->
     <section id="galeria">
-        <div>
-            <h1 class="titulo-galeria" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700">Galeria Amairani</h1>
-        </div>
-        <div class="contenedor-galeria">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291130/foto-59_tbx0u2.webp" alt="foto galeria1">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291129/foto-49_pzzya5.webp" alt="foto galeria2">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291128/foto-35_f9oxst.webp" alt="foto galeria3">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291127/foto-32_gbugvn.webp" alt="foto galeria4">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291126/foto-31_kkww0m.webp" alt="foto galeria5">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291125/foto-30_nntxw2.webp" alt="foto galeria6">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291124/foto-28_ummwtw.webp" alt="foto galeria7">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291120/foto-17_brau4l.webp" alt="foto galeria11">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291119/foto-6_cebbll.webp" alt="foto galeria12">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291118/foto-5_rk2v7j.webp" alt="foto galeria13">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291118/foto-4_jjwkvf.webp" alt="foto galeria14">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291117/foto-3_hxa6gn.webp" alt="foto galeria15">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291123/foto-26_vk4a8j.webp" alt="foto galeria10">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291122/foto-25_ycclmj.webp" alt="foto galeria8">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291121/foto-21_tapj15.webp" alt="foto galeria9">
+      <div>
+        <h1
+          class="titulo-galeria"
+          data-aos="fade-left"
+          data-aos-delay="100"
+          data-aos-duration="700"
+        >
+          Galeria Amairani
+        </h1>
+      </div>
+      <div class="contenedor-galeria">
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291130/foto-59_tbx0u2.webp"
+          alt="foto galeria1"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291129/foto-49_pzzya5.webp"
+          alt="foto galeria2"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291128/foto-35_f9oxst.webp"
+          alt="foto galeria3"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291127/foto-32_gbugvn.webp"
+          alt="foto galeria4"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291126/foto-31_kkww0m.webp"
+          alt="foto galeria5"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291125/foto-30_nntxw2.webp"
+          alt="foto galeria6"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291124/foto-28_ummwtw.webp"
+          alt="foto galeria7"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291120/foto-17_brau4l.webp"
+          alt="foto galeria11"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291119/foto-6_cebbll.webp"
+          alt="foto galeria12"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291118/foto-5_rk2v7j.webp"
+          alt="foto galeria13"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291118/foto-4_jjwkvf.webp"
+          alt="foto galeria14"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291117/foto-3_hxa6gn.webp"
+          alt="foto galeria15"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291123/foto-26_vk4a8j.webp"
+          alt="foto galeria10"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291122/foto-25_ycclmj.webp"
+          alt="foto galeria8"
+        />
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750291121/foto-21_tapj15.webp"
+          alt="foto galeria9"
+        />
+      </div>
 
-        </div>
-
-        <div class="modal">
-            <img class="contenedor-modal" id="imagenModal">
-            <span class="close">&times;</span>
-        </div>
+      <div class="modal">
+        <img class="contenedor-modal" id="imagenModal" />
+        <button class="prev">&#10094;</button>
+        <!--Flecha izquierda-->
+        <button class="next">&#10095;</button
+        ><!--Flecha derecha-->
+        <span class="close">&times;</span>
+      </div>
     </section>
-
 
     <!-- Seccion fiesta infantil -->
 
     <section id="fiesta-infantil">
-        <h1 class="texto-reventar">¡Revienta el globo para ver la dirección del evento!</h1>
-        
-        <div class="globo" id="globo">
-            <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983356/balloon_lptqq3.png" alt="Globo" class="imagen-globo">
-        </div>
+      <h1 class="texto-reventar">
+        ¡Revienta el globo para ver la dirección del evento!
+      </h1>
+
+      <div class="globo" id="globo">
+        <img
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983356/balloon_lptqq3.png"
+          alt="Globo"
+          class="imagen-globo"
+        />
+      </div>
     </section>
 
-    <audio id="sonido-globo" src="https://res.cloudinary.com/drsyb53ae/video/upload/v1741076797/musica%20amairani/ady7davt0keqbekzi2g4.wav"></audio>
+    <audio
+      id="sonido-globo"
+      src="https://res.cloudinary.com/drsyb53ae/video/upload/v1741076797/musica%20amairani/ady7davt0keqbekzi2g4.wav"
+    ></audio>
 
     <!-- Sección de Dirección (oculta inicialmente) -->
-    <section id="event-locations" class="event-locations" style="display: none;">
-        <h2 class="titulo-celebracion" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700">¡Aquí será la celebración!</h2>
-        <p class="texto-celebracion">Estas son las direcciones de los lugares donde se llevarán a cabo la misa y la fiesta.</p>
+    <section id="event-locations" class="event-locations" style="display: none">
+      <h2
+        class="titulo-celebracion"
+        data-aos="fade-left"
+        data-aos-delay="100"
+        data-aos-duration="700"
+      >
+        ¡Aquí será la celebración!
+      </h2>
+      <p class="texto-celebracion">
+        Estas son las direcciones de los lugares donde se llevarán a cabo la
+        misa y la fiesta.
+      </p>
 
-        <div class="location-gallery">
-            <!-- Card de la Misa -->
-            <div class="location-card" onclick="girarTarjeta(this)">
-                <div class="location-inner">
-                    <div class="location-front">
-                        <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983356/church_xssxcd.png" alt="Iglesia">
-                        <p>Dirección de la Misa</p>
-                    </div>
-                    <div class="location-back">
-                        <p>Iglesia San Pedro Apóstol <br> Calle de la Fe #123, Centro</p>
-                        <!--Botom con enlace a Google Maps-->
-                        <a href="https://maps.app.goo.gl/GLmxz9hdiX5DPFbX6" target="_blank">
-                            <button class="custom-button">Abrir mapa</button>
-                        </a>
-                    </div>
-                </div>
+      <div class="location-gallery">
+        <!-- Card de la Misa -->
+        <div class="location-card" onclick="girarTarjeta(this)">
+          <div class="location-inner">
+            <div class="location-front">
+              <img
+                src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983356/church_xssxcd.png"
+                alt="Iglesia"
+              />
+              <p>Dirección de la Misa</p>
             </div>
-
-            <!-- Card de la Fiesta -->
-            <div class="location-card" onclick="girarTarjeta(this)">
-                <div class="location-inner">
-                    <div class="location-front">
-                        <img src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983355/party_drj4sq.png" alt="Fiesta">
-                        <p>Dirección de la Fiesta</p>
-                    </div>
-                    <div class="location-back">
-                        <p>Salón de Eventos "La Hacienda" <br> Av. de la Alegría #456, Norte</p>
-                        <a href="https://maps.app.goo.gl/iM1L7XsSooQsgpL77" target="_blank">
-                            <button class="custom-button">Abrir mapa</button>
-                        </a>
-                    </div>
-                </div>
+            <div class="location-back">
+              <p>
+                Iglesia San Pedro Apóstol <br />
+                Calle de la Fe #123, Centro
+              </p>
+              <!--Botom con enlace a Google Maps-->
+              <a
+                href="https://maps.app.goo.gl/GLmxz9hdiX5DPFbX6"
+                target="_blank"
+              >
+                <button class="custom-button">Abrir mapa</button>
+              </a>
             </div>
+          </div>
         </div>
 
-        <div class="contenedor-padrinos">
-            <h2 class="titulo-padrinos" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700" >Mis Padrinos:</h2>
-            <p class="nombres-padrinos">Maria De Los Angeles Robledo Segura <br> & <br> Omar Abraham Rodriguez Garcia</p>
+        <!-- Card de la Fiesta -->
+        <div class="location-card" onclick="girarTarjeta(this)">
+          <div class="location-inner">
+            <div class="location-front">
+              <img
+                src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983355/party_drj4sq.png"
+                alt="Fiesta"
+              />
+              <p>Dirección de la Fiesta</p>
+            </div>
+            <div class="location-back">
+              <p>
+                Salón de Eventos "La Hacienda" <br />
+                Av. de la Alegría #456, Norte
+              </p>
+              <a
+                href="https://maps.app.goo.gl/iM1L7XsSooQsgpL77"
+                target="_blank"
+              >
+                <button class="custom-button">Abrir mapa</button>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <div class="contenedor-padrinos">
+        <h2
+          class="titulo-padrinos"
+          data-aos="fade-left"
+          data-aos-delay="100"
+          data-aos-duration="700"
+        >
+          Mis Padrinos:
+        </h2>
+        <p class="nombres-padrinos">
+          Maria De Los Angeles Robledo Segura <br />
+          & <br />
+          Omar Abraham Rodriguez Garcia
+        </p>
+      </div>
     </section>
-    
 
-
-
-<!-- Sección Subir Fotos -->
-<section id="subir-fotos">
-    <div class="contenedor-subir-photos">
+    <!-- Sección Subir Fotos -->
+    <section id="subir-fotos">
+      <div class="contenedor-subir-photos">
         <!-- Título -->
         <div class="texto-titulo">
-            <h1 class="title-upload-photos" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">¡Sube tus fotos!</h1>
+          <h1
+            class="title-upload-photos"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            ¡Sube tus fotos!
+          </h1>
         </div>
 
         <!-- Descripción -->
         <div class="texto-subir-fotos">
-            <p class="frase-texto">
-                "Cada imagen que subas se convertirá en parte de este día inolvidable, 
-                lleno de amor y momentos únicos!!"
-            </p>
-            <p class="texto-info">
-                Toma una foto o seleccionala desde tu dispositivo para compartirla con nosotros en Google Drive!
-                <br> (Maximo 5 archivos a la vez) 
-            </p>
+          <p class="frase-texto">
+            "Cada imagen que subas se convertirá en parte de este día
+            inolvidable, lleno de amor y momentos únicos!!"
+          </p>
+          <p class="texto-info">
+            Toma una foto o seleccionala desde tu dispositivo para compartirla
+            con nosotros en Google Drive!
+            <br />
+            (Maximo 5 archivos a la vez)
+          </p>
         </div>
 
         <!-- Formulario de carga de archivo -->
         <div class="contenedor-form">
-            <form id="uploadForm" enctype="multipart/form-data">
-                <label for="fileInput">Tomar o Seleccionar Fotos</label>
-                <input id="fileInput" type="file" name="files" accept="image/*" multiple required >
-                <button id="uploadButton" type="button" class="upload-button" aria-label="Subir fotos">Subir Fotos</button>
-                <img class="pastel-plimplim" src="https://res.cloudinary.com/drsyb53ae/image/upload/v1741061182/recursos%20amairani%20images/ugpbbnhelpjspds4ve2x.png" alt="pastel-plimplim">
-                <img class="cerdito-trompeta" src="https://res.cloudinary.com/drsyb53ae/image/upload/v1741061629/recursos%20amairani%20images/qi8v9uhqnwojaevbrguh.png" alt="Cerdito-trompeta">
-            </form>
-            <!-- Mensaje de estado -->
-            <div id="statusMessage"></div>
-            <!-- Lista de archivos cargados -->
-            <div id="fileList"></div>
+          <form id="uploadForm" enctype="multipart/form-data">
+            <label for="fileInput">Tomar o Seleccionar Fotos</label>
+            <input
+              id="fileInput"
+              type="file"
+              name="files"
+              accept="image/*"
+              multiple
+              required
+            />
+            <button
+              id="uploadButton"
+              type="button"
+              class="upload-button"
+              aria-label="Subir fotos"
+            >
+              Subir Fotos
+            </button>
+            <img
+              class="pastel-plimplim"
+              src="https://res.cloudinary.com/drsyb53ae/image/upload/v1741061182/recursos%20amairani%20images/ugpbbnhelpjspds4ve2x.png"
+              alt="pastel-plimplim"
+            />
+            <img
+              class="cerdito-trompeta"
+              src="https://res.cloudinary.com/drsyb53ae/image/upload/v1741061629/recursos%20amairani%20images/qi8v9uhqnwojaevbrguh.png"
+              alt="Cerdito-trompeta"
+            />
+          </form>
+          <!-- Mensaje de estado -->
+          <div id="statusMessage"></div>
+          <!-- Lista de archivos cargados -->
+          <div id="fileList"></div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-
-      <!--Seccion Confirmacion de asistencia via whatsapp-->
-      <section id="confirmar-asistencia">
-        <div class="confirmacion">
-          <h1 class="titulo-confirmacion">Confirmar Asistencia</h1>
-          <p class="texto-confirmacion">Me haria muy feliz que me acompaniaras en mi cumpleanios</p>
-          <a href="https://wa.me/524623048713?text=
+    <!--Seccion Confirmacion de asistencia via whatsapp-->
+    <section id="confirmar-asistencia">
+      <div class="confirmacion">
+        <h1 class="titulo-confirmacion">Confirmar Asistencia</h1>
+        <p class="texto-confirmacion">
+          Me haria muy feliz que me acompaniaras en mi cumpleanios
+        </p>
+        <a
+          href="https://wa.me/524623048713?text=
                 🎉🥳 ¡Siii, confirmado! 🐣✨
                 ¡Nos vemos en la fiesta! 🤩🎈
-                ¡Ya estoy emocionadito/a! 🐻🎊💖" 
-             target="_blank" 
-             class="boton-confirmar">
-             Confirmar vía WhatsApp
-          </a>
-        </div>
-        <img class="plimplim-esquina" src="https://res.cloudinary.com/drsyb53ae/image/upload/v1741153322/recursos%20amairani%20images/sp6oyrffonrgvlaegqg9.png" alt="plimplim esquina">
-        <img class="cerdito-granjero" src="https://res.cloudinary.com/drsyb53ae/image/upload/v1741153978/recursos%20amairani%20images/zx5vxvjgrjfqgcfjig09.png" alt="Cerdito granjero">
-      </section>
-    
-<!--Scripts-->   
+                ¡Ya estoy emocionadito/a! 🐻🎊💖"
+          target="_blank"
+          class="boton-confirmar"
+        >
+          Confirmar vía WhatsApp
+        </a>
+      </div>
+      <img
+        class="plimplim-esquina"
+        src="https://res.cloudinary.com/drsyb53ae/image/upload/v1741153322/recursos%20amairani%20images/sp6oyrffonrgvlaegqg9.png"
+        alt="plimplim esquina"
+      />
+      <img
+        class="cerdito-granjero"
+        src="https://res.cloudinary.com/drsyb53ae/image/upload/v1741153978/recursos%20amairani%20images/zx5vxvjgrjfqgcfjig09.png"
+        alt="Cerdito granjero"
+      />
+    </section>
+
+    <!--Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
-
