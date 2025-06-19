@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let indiceActual = 0;
   const audio = document.getElementById("musica");
   const botonReproducir = document.querySelector(".boton-reproducir");
+  const botonAnterior = document.querySelector(".boton-anterior");
   const botonSiguiente = document.querySelector(".boton-siguiente");
 
   // Verificar si los elementos existen
@@ -85,6 +86,20 @@ document.addEventListener("DOMContentLoaded", function () {
       audio.pause();
       botonReproducir.textContent = "Reproducir"; // Cambia el texto del botón a "Reproducir"
     }
+  }
+
+  function previousSong() {
+    indiceActual = (indiceActual - 1 + canciones.length) % canciones.length; // Cambia de canción al anterior en la lista
+    audio.src = canciones[indiceActual]; // Actualiza la fuente del audio
+    audio.load(); // Recarga el audio
+    audio
+      .play() // Reproduce la nueva canción
+      .then(() => {
+        botonReproducir.textContent = "Pausar"; // Cambia el texto del botón a "Pausar"
+      })
+      .catch((error) =>
+        console.error("❌ Error al cambiar de canción:", error)
+      );
   }
 
   // Función para cambiar de canción
@@ -118,6 +133,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Asignar evento al botón de reproducción
   botonReproducir.addEventListener("click", playAudio);
+  // Asignar evento al botón de canción anterior
+  botonAnterior.addEventListener("click", previousSong);
   // Asignar evento al botón de siguiente canción
   botonSiguiente.addEventListener("click", nextSong);
 });

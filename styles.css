@@ -326,7 +326,7 @@ body::before {
 .contenedor-reproductor {
   display: grid;
   place-items: center; /* Centra horizontal y verticalmente */
-  min-height: 115vh; /* Ocupa toda la altura de la pantalla */
+  min-height: 110vh; /* Ocupa toda la altura de la pantalla */
 }
 
 /* Estilos del reproductor (sin cambios) */
@@ -402,6 +402,23 @@ p {
   cursor: pointer;
 }
 
+/*Estilos para el boton "Anterior"*/
+.boton-anterior {
+  font-family: "Chewy", cursive;
+  background-color: #ff0055;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-siguiente:hover {
+  background-color: #ff578f;
+}
+
 /* Estilos para el botón "Siguiente" */
 .boton-siguiente {
   font-family: "Chewy", cursive;
@@ -426,6 +443,7 @@ p {
     display: grid;
     place-items: center; /* Centra horizontal y verticalmente */
     padding: 10px; /* Agrega un poco de espacio alrededor para evitar que el reproductor toque los bordes */
+    min-height: 125vh; /* Ocupa toda la altura de la pantalla */
     overflow: hidden; /* Evita que los elementos se desborden */
     margin-top: -38rem;
   }
@@ -484,6 +502,14 @@ p {
 
   .icono {
     font-size: 1.5rem; /* Reducir el tamaño del icono */
+  }
+
+  .boton-anterior {
+    font-family: "Chewy";
+    font-size: 1rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    padding: 8px 16px; /* Ajustar el padding para que se vea mejor */
+    margin-top: 8px; /* Reducir el margen superior */
+    width: 90%; /* Asegura que el botón ocupe el 100% del contenedor */
   }
 
   .boton-siguiente {
@@ -1763,16 +1789,16 @@ button {
 
   .plimplim-esquina {
     margin-bottom: 2rem;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin-right: 0;
   }
 
   .cerdito-granjero {
     margin-bottom: 2rem;
     margin-left: 0.5rem;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin-top: 1rem;
   }
 }
