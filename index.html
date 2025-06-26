@@ -157,6 +157,15 @@
       <div class="contenedor-reproductor">
         <div class="reproductor">
           <h1>¡Si quieres puedes escuchar la música que me gusta!</h1>
+          <p id="tituloCancion" class="titulo-cancion"></p>
+
+
+          <!-- Barra de progreso y tiempos -->
+        <div class="barra-progreso">
+          <span id="tiempo-actual">0:00</span>
+          <input type="range" id="progreso" value="0" min="0" step="1" />
+          <span id="tiempo-total">0:00</span>
+        </div>
 
           <!-- Botón de reproducción -->
           <button class="boton-reproducir">Reproducir</button>
@@ -185,7 +194,7 @@
           </div>
 
           <!-- Controles de música -->
-          <div>
+          <div class="controles-musica">
             <button class="boton-anterior">Anterior</button>
             <button class="boton-siguiente">Siguiente</button>
           </div>
@@ -308,7 +317,7 @@
 
       <div class="globo" id="globo">
         <img
-          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983356/balloon_lptqq3.png"
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750919030/image-SLW4v3ZRvj7Si9YqPiWqBSY3K1J03w_s4tw2p.png"
           alt="Globo"
           class="imagen-globo"
         />
@@ -321,7 +330,7 @@
     ></audio>
 
     <!-- Sección de Dirección (oculta inicialmente) -->
-    <section id="event-locations" class="event-locations" style="display: none">
+    <section id="event-locations" class="event-locations"">
       <h2
         class="titulo-celebracion"
         data-aos="fade-left"
@@ -341,19 +350,25 @@
           <div class="location-inner">
             <div class="location-front">
               <img
-                src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983356/church_xssxcd.png"
+                src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750924350/image-MFZivdlX880yHITKHWBXYkIpUROYvb_w4wl6l.png"
                 alt="Iglesia"
               />
               <p>Dirección de la Misa</p>
             </div>
             <div class="location-back">
               <p>
-                Iglesia San Pedro Apóstol <br />
-                Calle de la Fe #123, Centro
+                <span class="text-card-back">
+                  "Parroquia Del Espíritu Santo, Las Criptas"</span
+                >
+                <br />
+                <span class="text-menor-back"
+                  >C. Ramón Barreto de Tabora S/N, Moderna, 36690 Irapuato,
+                  Gto.</span
+                >
               </p>
               <!--Botom con enlace a Google Maps-->
               <a
-                href="https://maps.app.goo.gl/GLmxz9hdiX5DPFbX6"
+                href="https://maps.app.goo.gl/BWZfZTPwXg6NsiVA6"
                 target="_blank"
               >
                 <button class="custom-button">Abrir mapa</button>
@@ -367,18 +382,21 @@
           <div class="location-inner">
             <div class="location-front">
               <img
-                src="https://res.cloudinary.com/drsyb53ae/image/upload/v1740983355/party_drj4sq.png"
+                src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750924158/image-Uf9LNKsrEyUZoUA6vn31PkaLFpTgJD_jugrad.png"
                 alt="Fiesta"
               />
               <p>Dirección de la Fiesta</p>
             </div>
             <div class="location-back">
               <p>
-                Salón de Eventos "La Hacienda" <br />
-                Av. de la Alegría #456, Norte
+                <span class="text-card-back">"Barda Vallarta Irapuato"</span>
+                <br />
+                <span class="text-menor-back"
+                  >Vallarta, Barrio de la Salud, 36510 Irapuato, Gto.</span
+                >
               </p>
               <a
-                href="https://maps.app.goo.gl/iM1L7XsSooQsgpL77"
+                href="https://maps.app.goo.gl/h2x4yRJrxMCJRZ2j9"
                 target="_blank"
               >
                 <button class="custom-button">Abrir mapa</button>
@@ -388,6 +406,7 @@
         </div>
       </div>
 
+      <!--Informacion sobre los padrinos de bautizo-->
       <div class="contenedor-padrinos">
         <h2
           class="titulo-padrinos"
@@ -395,13 +414,18 @@
           data-aos-delay="100"
           data-aos-duration="700"
         >
-          Mis Padrinos:
+          Mis Padrinos de Bautizo:
         </h2>
         <p class="nombres-padrinos">
           Maria De Los Angeles Robledo Segura <br />
           & <br />
           Omar Abraham Rodriguez Garcia
         </p>
+        <img
+          class="img-pileta"
+          src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750924122/image-FtXFQpTRHwc2gu4MPf51VcQrAEizy7_s90m2b.png"
+          alt="pileta de bautizo"
+        />
       </div>
     </section>
 

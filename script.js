@@ -52,18 +52,76 @@ window.onload = function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Lista de canciones
   const canciones = [
-    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/l4otlu6b7n1z2cof50fs.mp3",
-    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/fjkxoy95ykv4odccuujn.mp3",
-    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/iyqi5iktgi0jisxdwnno.mp3",
-    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983842/musica%20amairani/fxez6gm3ckitbondpgqm.mp3",
-    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/ribemt7rsamzxabgvfux.mp3",
+    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/l4otlu6b7n1z2cof50fs.mp3", //Hoy es tu cumpleanios plimplim
+    "https://res.cloudinary.com/drsyb53ae/video/upload/v1750931348/Bruno_Mars_-_The_Lazy_Song_Official_Music_Video_fLexgOxsZu0_omm6oz.mp3", //lazysong bruno mars
+    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/fjkxoy95ykv4odccuujn.mp3", //Las manianitas plimplim
+    "https://res.cloudinary.com/drsyb53ae/video/upload/v1750931821/BENEE_-_Supalonely_ft._Gus_Dapperton_Rb6Scz-5YOs_ku1rly.mp3", //Supalonely
+    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/iyqi5iktgi0jisxdwnno.mp3", //Abejita plimplim
+    "https://res.cloudinary.com/drsyb53ae/video/upload/v1750932566/ROSE%CC%81_Bruno_Mars_-_APT._Official_Music_Video_ekr2nIex040_bqdplh.mp3", //Apt
+    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983842/musica%20amairani/fxez6gm3ckitbondpgqm.mp3", // Un pijito
+    "https://res.cloudinary.com/drsyb53ae/video/upload/v1750933176/Black_Eyed_Peas_Shakira_-_GIRL_LIKE_ME_Official_Music_Video_vMLk_T0PPbk_jyhyye.mp3", // Shakira girl like me
+    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/ribemt7rsamzxabgvfux.mp3", //Fotosintesis plimplim
   ];
+
+  const titulos = [
+    "Hoy es tu cumpleaños - 1 Año 🥳 ¡Feliz Cumpleaños! ♫ Plim Plim ♫ Canciones Infantiles",
+    "Bruno Mars - The Lazy Song",
+    "Las Mañanitas ♫ Canciones Infantiles ♫ Plim Plim",
+    "BENEE - Supalonely ft. Gus Dapperton",
+    "Abejita Chiquitita 🐝 Canciones Infantiles | Plim Plim",
+    "ROSÉ & Bruno Mars - APT.",
+    "Un Piojito 🎶 Canciones Infantiles | Plim Plim",
+    "Black Eyed Peas, Shakira - GIRL LIKE ME",
+    "Fotosíntesis 🌞 ¡Hola Plantita! 🍃 Canciones Infantiles | Plim Plim",
+  ];
+
+  const tituloCancion = document.getElementById("tituloCancion");
+
+  function actualizarTitulo() {
+    if (tituloCancion) {
+      tituloCancion.textContent = titulos[indiceActual];
+    }
+  }
 
   let indiceActual = 0;
   const audio = document.getElementById("musica");
   const botonReproducir = document.querySelector(".boton-reproducir");
   const botonAnterior = document.querySelector(".boton-anterior");
   const botonSiguiente = document.querySelector(".boton-siguiente");
+  const barraProgreso = document.getElementById("progreso");
+  const tiempoActual = document.getElementById("tiempo-actual");
+  const tiempoTotal = document.getElementById("tiempo-total");
+
+  // Formatear segundos a mm:ss
+  function formatearTiempo(segundos) {
+    const min = Math.floor(segundos / 60);
+    const seg = Math.floor(segundos % 60)
+      .toString()
+      .padStart(2, "0");
+    return `${min}:${seg}`;
+  }
+
+  // Actualiza la barra y tiempos mientras se reproduce
+  audio.addEventListener("timeupdate", () => {
+    barraProgreso.value = audio.currentTime;
+    tiempoActual.textContent = formatearTiempo(audio.currentTime);
+
+    // Actualiza la barra visualmente con gradiente según progreso
+    const porcentaje = (audio.currentTime / audio.duration) * 100;
+    barraProgreso.style.background = `linear-gradient(to right, #ff4081 0%, #ff4081 ${porcentaje}%, #ccc ${porcentaje}%, #ccc 100%)`;
+  });
+
+  // Actualiza duración total cuando la canción carga
+  audio.addEventListener("loadedmetadata", () => {
+    barraProgreso.max = Math.floor(audio.duration);
+    tiempoTotal.textContent = formatearTiempo(audio.duration);
+    barraProgreso.style.background = `linear-gradient(to right, #ff4081 0%, #ccc 0%, #ccc 100%)`;
+  });
+
+  // Permite adelantar/retroceder con el slider
+  barraProgreso.addEventListener("input", () => {
+    audio.currentTime = barraProgreso.value;
+  });
 
   // Verificar si los elementos existen
   if (!audio || !botonReproducir || !botonSiguiente) {
@@ -86,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
       audio.pause();
       botonReproducir.textContent = "Reproducir"; // Cambia el texto del botón a "Reproducir"
     }
+    actualizarTitulo();
   }
 
   function previousSong() {
@@ -100,6 +159,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) =>
         console.error("❌ Error al cambiar de canción:", error)
       );
+
+    actualizarTitulo();
   }
 
   // Función para cambiar de canción
@@ -115,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) =>
         console.error("❌ Error al cambiar de canción:", error)
       );
+    actualizarTitulo();
   }
 
   // Función para ajustar el volumen - Haciendo accesible globalmente
@@ -144,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ======================================
 
 // Fecha de la fiesta
-const fechaFiesta = new Date("2025-07-12T15:00:00").getTime();
+const fechaFiesta = new Date("2025-06-25T15:00:00").getTime();
 
 // Obtener el contenedor de la sección "Subir Fotos"
 const sectionSubirFotos = document.getElementById("subir-fotos"); // Asegúrate de que la sección tiene el ID "subir-fotos"
@@ -254,6 +316,12 @@ modal.addEventListener("click", (e) => {
   if (e.target === modal) cerrarModal();
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    cerrarModal();
+  }
+});
+
 // ======================================
 // Reventar globo y lanzar confeti
 // ======================================
@@ -350,7 +418,7 @@ document
     const maxSize = 200 * 1024 * 1024; // 200 MB en bytes
     if (totalSize > maxSize) {
       statusMessage.textContent =
-        "¡El tamaño total de los archivos no debe superar los 50 MB!"; // Usamos "statusMessage"
+        "¡El tamaño total de los archivos no debe superar los 200 MB!"; // Usamos "statusMessage"
       statusMessage.style.display = "block"; // Mostrar el mensaje de error
       return;
     }
