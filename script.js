@@ -58,9 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "https://res.cloudinary.com/drsyb53ae/video/upload/v1750931821/BENEE_-_Supalonely_ft._Gus_Dapperton_Rb6Scz-5YOs_ku1rly.mp3", //Supalonely
     "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/iyqi5iktgi0jisxdwnno.mp3", //Abejita plimplim
     "https://res.cloudinary.com/drsyb53ae/video/upload/v1750932566/ROSE%CC%81_Bruno_Mars_-_APT._Official_Music_Video_ekr2nIex040_bqdplh.mp3", //Apt
-    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983842/musica%20amairani/fxez6gm3ckitbondpgqm.mp3", // Un pijito
+    // "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983842/musica%20amairani/fxez6gm3ckitbondpgqm.mp3", // Un pijito
     "https://res.cloudinary.com/drsyb53ae/video/upload/v1750933176/Black_Eyed_Peas_Shakira_-_GIRL_LIKE_ME_Official_Music_Video_vMLk_T0PPbk_jyhyye.mp3", // Shakira girl like me
-    "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/ribemt7rsamzxabgvfux.mp3", //Fotosintesis plimplim
+    // "https://res.cloudinary.com/drsyb53ae/video/upload/v1740983843/musica%20amairani/ribemt7rsamzxabgvfux.mp3", //Fotosintesis plimplim
   ];
 
   const titulos = [
@@ -70,9 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "BENEE - Supalonely ft. Gus Dapperton",
     "Abejita Chiquitita 🐝 Canciones Infantiles | Plim Plim",
     "ROSÉ & Bruno Mars - APT.",
-    "Un Piojito 🎶 Canciones Infantiles | Plim Plim",
+    // "Un Piojito 🎶 Canciones Infantiles | Plim Plim",
     "Black Eyed Peas, Shakira - GIRL LIKE ME",
-    "Fotosíntesis 🌞 ¡Hola Plantita! 🍃 Canciones Infantiles | Plim Plim",
+    // "Fotosíntesis 🌞 ¡Hola Plantita! 🍃 Canciones Infantiles | Plim Plim",
   ];
 
   const tituloCancion = document.getElementById("tituloCancion");

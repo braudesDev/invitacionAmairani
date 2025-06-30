@@ -1591,7 +1591,7 @@ button {
   width: 130px;
   height: 130px;
   margin-top: 20px;
-  align-self: flex-start;
+  align-items: center;
 
   animation: flotar 3s infinite ease-in-out;
 }
@@ -1606,18 +1606,17 @@ button {
   }
 }
 
-.cerdito-trompeta {
+/* .cerdito-trompeta {
   width: 140px;
-  height: 130px;
+  height: 120px;
   transform: scaleX(-1);
   position: absolute;
   bottom: 0;
   right: 0;
   margin-top: 20px;
 
-  /* Animación de balanceo infinita */
   animation: balanceo 2s infinite ease-in-out;
-}
+} */
 
 @keyframes balanceo {
   0%,
@@ -1871,8 +1870,8 @@ button {
   bottom: 0;
   margin-left: 0.5rem;
   left: 0;
-  width: 350px;
-  height: 400px;
+  width: 400px;
+  height: 350px;
   margin-top: 20px;
 }
 
