@@ -159,13 +159,12 @@
           <h1>¡Si quieres puedes escuchar la música que me gusta!</h1>
           <p id="tituloCancion" class="titulo-cancion"></p>
 
-
           <!-- Barra de progreso y tiempos -->
-        <div class="barra-progreso">
-          <span id="tiempo-actual">0:00</span>
-          <input type="range" id="progreso" value="0" min="0" step="1" />
-          <span id="tiempo-total">0:00</span>
-        </div>
+          <div class="barra-progreso">
+            <span id="tiempo-actual">0:00</span>
+            <input type="range" id="progreso" value="0" min="0" step="1" />
+            <span id="tiempo-total">0:00</span>
+          </div>
 
           <!-- Botón de reproducción -->
           <button class="boton-reproducir">Reproducir</button>
@@ -330,7 +329,7 @@
     ></audio>
 
     <!-- Sección de Dirección (oculta inicialmente) -->
-    <section id="event-locations" class="event-locations"">
+    <section id="event-locations" class="event-locations" style="display: none">
       <h2
         class="titulo-celebracion"
         data-aos="fade-left"
@@ -353,7 +352,7 @@
                 src="https://res.cloudinary.com/drsyb53ae/image/upload/v1750924350/image-MFZivdlX880yHITKHWBXYkIpUROYvb_w4wl6l.png"
                 alt="Iglesia"
               />
-              <p>Dirección y hora de la Misa  </p>
+              <p>Dirección y hora de la Misa</p>
             </div>
             <div class="location-back">
               <p>
@@ -364,7 +363,11 @@
                 <span class="text-menor-back"
                   >C. Ramón Barreto de Tabora S/N, Moderna, 36690 Irapuato,
                   Gto.</span
-                > <br> <span class="hora-misa" style="color:blueviolet">Hora: 1:00.P.M. </span>
+                >
+                <br />
+                <span class="hora-misa" style="color: blueviolet"
+                  >Hora: 1:00.P.M.
+                </span>
               </p>
               <!--Botom con enlace a Google Maps-->
               <a
@@ -393,7 +396,11 @@
                 <br />
                 <span class="text-menor-back"
                   >Vallarta, Barrio de la Salud, 36510 Irapuato, Gto.</span
-                > <br> <span class="hora-evento" style="color: blueviolet;">Hora: A partir de las 3.P.M </span>
+                >
+                <br />
+                <span class="hora-evento" style="color: blueviolet"
+                  >Hora: A partir de las 3.P.M
+                </span>
               </p>
               <a
                 href="https://maps.app.goo.gl/h2x4yRJrxMCJRZ2j9"
