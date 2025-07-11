@@ -465,7 +465,10 @@ document
 // Logica para hacer scroll hasta la seccion subir fotos
 // Espera a que todo el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.hash === "#subir-fotos") {
+  if (
+    window.location.hash &&
+    window.location.hash.includes === "#subir-fotos"
+  ) {
     // Esperamos un poco más por si hay animaciones o AOS
     setTimeout(() => {
       const target = document.getElementById("subir-fotos");
