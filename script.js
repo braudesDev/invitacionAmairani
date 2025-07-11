@@ -462,6 +462,18 @@ document
     }
   });
 
+// Logica para hacer scroll hasta la seccion subir fotos
+window.addEventListener("load", () => {
+  if (window.location.hash === "#subir-fotos") {
+    const target = document.getElementById("subir-fotos");
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+      }, 500); // Espera un poco para asegurar que AOS haya cargado
+    }
+  }
+});
+
 // ======================================
 // Lógica para confirmacion de asistencia
 // ======================================
