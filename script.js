@@ -237,25 +237,28 @@ const intervalo = setInterval(function () {
     segundos + " <span>Segundos</span>";
 
   // Si la cuenta regresiva llega a cero, mostrar mensaje y la sección de fotos
-if (distancia < 0) {
-  clearInterval(intervalo);
-  document.getElementById("contador").innerHTML = "¡Es el gran día!";
+  if (distancia < 0) {
+    clearInterval(intervalo);
+    document.getElementById("contador").innerHTML = "¡Es el gran día!";
 
-  // Mostrar la sección de subir fotos
-  sectionSubirFotos.style.display = "block";
+    // Mostrar la sección de subir fotos
+    sectionSubirFotos.style.display = "block";
 
-  // Esperar un poco para que el navegador renderice el cambio, luego hacer scroll
-  setTimeout(() => {
-    if (window.location.hash.includes("subir-fotos")) {
-      const target = document.getElementById("subir-fotos");
-      if (target) {
-        console.log("⚠️ Scroll activado tras mostrar sección.");
-        target.scrollIntoView({ behavior: "smooth" });
+    // Re-inicializar AOS para que detecte los elementos visibles recién mostrados
+    AOS.refresh(); // 👈 ¡ESTO ES CLAVE!
+
+    // Hacer scroll después de mostrar la sección
+    setTimeout(() => {
+      if (window.location.hash.includes("subir-fotos")) {
+        const target = document.getElementById("subir-fotos");
+        if (target) {
+          console.log("⚠️ Scroll activado tras mostrar sección.");
+          target.scrollIntoView({ behavior: "smooth" });
+        }
       }
-    }
-  }, 300); // 300ms para asegurar que el cambio de display se procese
-}
-
+    }, 300);
+  }
+});
 
 // ======================================
 // Modal para visualizar imágenes grandes
