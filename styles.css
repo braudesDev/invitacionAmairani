@@ -1435,7 +1435,6 @@ p {
   place-items: center;
   margin-bottom: 2rem;
   margin-top: 1rem;
-  border: red 1px;
 }
 
 /* Título principal */
@@ -1758,6 +1757,10 @@ button {
     font-size: 1.5rem;
     padding: 0.5rem;
     font-family: "Chewy", cursive;
+  }
+  label i,
+  button i {
+    margin-right: 8px;
   }
 
   #fileList {

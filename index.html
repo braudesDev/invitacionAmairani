@@ -107,6 +107,12 @@
       rel="stylesheet"
     />
 
+    //Iconos font-awesome
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <!-- API de Google para posibles integraciones (no hay llamada específica en el código) -->
     <script src="https://apis.google.com/js/api.js"></script>
 
@@ -468,7 +474,9 @@
         <!-- Formulario de carga de archivo -->
         <div class="contenedor-form">
           <form id="uploadForm" enctype="multipart/form-data">
-            <label for="fileInput">Tomar o Seleccionar Fotos</label>
+            <label for="fileInput">
+              <i class="fa-solid fa-camera"></i> Tomar o Seleccionar Fotos
+            </label>
             <input
               id="fileInput"
               type="file"
@@ -483,7 +491,7 @@
               class="upload-button"
               aria-label="Subir fotos"
             >
-              Subir Fotos
+              <i class="fa-solid fa-upload"></i> Subir Fotos
             </button>
             <img
               class="pastel-plimplim"
