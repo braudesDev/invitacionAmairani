@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ======================================
 
 // Fecha de la fiesta
-const fechaFiesta = new Date("2025-07-10T15:00:00").getTime();
+const fechaFiesta = new Date("2025-07-12T15:00:00").getTime();
 
 // Obtener el contenedor de la sección "Subir Fotos"
 const sectionSubirFotos = document.getElementById("subir-fotos"); // Asegúrate de que la sección tiene el ID "subir-fotos"
