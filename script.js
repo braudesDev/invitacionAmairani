@@ -465,17 +465,18 @@ document
 // Logica para hacer scroll hasta la seccion subir fotos
 // Espera a que todo el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
-  if (
-    window.location.hash &&
-    window.location.hash.includes === "#subir-fotos"
-  ) {
-    // Esperamos un poco más por si hay animaciones o AOS
-    setTimeout(() => {
-      const target = document.getElementById("subir-fotos");
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 1000); // Puedes ajustar el tiempo si aún no se ve bien
+  console.log("DOM cargado. Hash actual:", window.location.hash);
+
+  if (window.location.hash && window.location.hash.includes("subir-fotos")) {
+    const target = document.getElementById("subir-fotos");
+    if (target) {
+      console.log("Elemento encontrado. Intentando hacer scroll...");
+      target.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.log("Elemento con id 'subir-fotos' NO encontrado.");
+    }
+  } else {
+    console.log("Hash no contiene 'subir-fotos'.");
   }
 });
 
