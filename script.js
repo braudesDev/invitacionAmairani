@@ -463,14 +463,16 @@ document
   });
 
 // Logica para hacer scroll hasta la seccion subir fotos
-window.addEventListener("load", () => {
+// Espera a que todo el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", () => {
   if (window.location.hash === "#subir-fotos") {
-    const target = document.getElementById("subir-fotos");
-    if (target) {
-      setTimeout(() => {
+    // Esperamos un poco más por si hay animaciones o AOS
+    setTimeout(() => {
+      const target = document.getElementById("subir-fotos");
+      if (target) {
         target.scrollIntoView({ behavior: "smooth" });
-      }, 500); // Espera un poco para asegurar que AOS haya cargado
-    }
+      }
+    }, 1000); // Puedes ajustar el tiempo si aún no se ve bien
   }
 });
 
